@@ -88,50 +88,55 @@ body{
     text-decoration: none;
     -webkit-text-stroke: 1px rgb(141, 141, 141);
     color: transparent;
+    position: relative;
 }
-
-.nav__button:hover{
-    transition-duration: 1s;
-    -webkit-text-stroke: 1px rgb(219, 219, 219);   
-}
-
-.nav__button:not(:hover){
-    transition-duration: 1s;
-}
-
-#nav__button--img{
-    opacity: 70%;
-}
-
-#nav__button--img:hover{
-    transition-duration: 2s;
-    opacity:20%;
-}
-
-#nav__button--img:not(:hover){
-    transition-duration: 1s;
-}
+  
+    .nav__button::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(139, 139, 139, 0.63);
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+  }
+  
+    .nav__button:hover::before {
+    transform: scaleX(1);
+  }
 
 /* FIN HEADER */
 
 /* I N D E X */
 
-
-.portada{
-
+.portada_imagen{
     background-image: url(../assets/fondo-falafell.jpeg);
     background-position:center;
     background-repeat:no-repeat;
     background-size: 100vw;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: 100vw;
+}
+
+.portada{
+
+    
     margin: auto;
     box-sizing: border-box;
     color: white;
-    text-align: center;    
+    text-align: center;  
 }
+
 
 #portada__textGovinda{
     padding-top: 20px; 
     font-size: 120px; /*180*/
+    transform: rotate(-3deg);
 }
 
 #portada__textVeggie{

@@ -1,0 +1,777 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Contrail One', cursive;
+    text-align: center;
+}
+
+/*
+
+secciones:
+    header
+    index
+    
+    nosotros
+    cultura
+    contacto
+    footer
+
+    productos
+*/
+
+body{
+    background-image: url(../assets/fondo-pattern-color2.jpg);
+    background-repeat: repeat;
+}
+
+/* H E A D E R */
+
+.nav{
+    width: 100vw;
+    height: 70px;
+    justify-content:baseline;
+    align-content: center;
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: "logo  menu";
+    background-color: rgba(0, 0, 0, 0.041);
+}
+
+
+#navLogoMobile{
+    grid-area: "logo";
+    width: 20%;
+    padding-left: 20%;
+}
+
+#navMenu{
+
+    grid-area: "menu";
+    width: 20%;
+    justify-self: flex-end;
+    align-self: center;
+    padding-right: 40%;
+    list-style: none;
+    font-size: 30px;
+    position:relative;
+}
+
+.navSubmenu{
+    display: none;
+    position: absolute;
+    z-index: 10;
+}
+
+#navLogoDesktop{
+    display: none;
+}
+
+@media (max-width: 648px) {
+    #navMenu:hover > .navSubmenu{
+        display:block;
+        background-color: rgba(255, 255, 255, 0.651);
+        border-radius: 0px;
+        border: 1px solid rgb(0, 0, 0);
+    }
+}
+
+.nav__items{
+    vertical-align: middle;
+    justify-self: flex-start;
+    list-style: none;
+    padding: 10px;
+    font-size: 20px; /*desktop 30*/
+}
+
+.nav__button{
+    text-decoration: none;
+    -webkit-text-stroke: 1px rgb(141, 141, 141);
+    color: transparent;
+}
+
+.nav__button:hover{
+    transition-duration: 1s;
+    -webkit-text-stroke: 1px rgb(219, 219, 219);   
+}
+
+.nav__button:not(:hover){
+    transition-duration: 1s;
+}
+
+#nav__button--img{
+    opacity: 70%;
+}
+
+#nav__button--img:hover{
+    transition-duration: 2s;
+    opacity:20%;
+}
+
+#nav__button--img:not(:hover){
+    transition-duration: 1s;
+}
+
+/* FIN HEADER */
+
+/* I N D E X */
+
+
+.portada{
+
+    background-image: url(../assets/fondo-falafell.jpeg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: 100vw;
+    margin: auto;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;    
+}
+
+#portada__textGovinda{
+    padding-top: 20px; 
+    font-size: 120px; /*180*/
+}
+
+#portada__textVeggie{
+    font-size: 13px;  /*20*/
+    padding-bottom: 20px;  
+}
+
+#portada__textComidaCasera{
+    font-size: 80px; /*114*/
+}
+
+#portada__textCongelado{
+    font-size: 32px; /*48*/
+    padding-bottom: 60px;
+}
+
+.contenedorButton{
+    padding-bottom: 50px;    
+}
+
+#portada__button{
+    color:rgb(255, 255, 255);
+    font-size: 24px; /*36*/
+    text-decoration: none;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: 4px double rgb(255, 255, 255);
+    border-radius: 2px;
+    border-style:double;
+}
+
+#portada__button:hover{
+    transition-duration: 1s;
+    -webkit-text-stroke: none;
+    color:rgb(255, 255, 255);
+    opacity: 50%;
+}
+
+#portada__button:not(:hover){
+    transition-duration: 1s;
+}
+
+.portada2{
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    
+    align-content: center;
+    align-items: center;
+}
+
+.portada2__contenedorIzquierda{
+    height: 720px;
+    width: 540px;
+    box-sizing: border-box;
+    border-right: 3px solid rgb(173, 118, 46);
+    background-image: url(../assets/burg1.jpeg);
+    background-position:bottom;
+    background-size: 540px;
+}
+
+.portada2__contenedorDerecha{
+    height: 720px;
+    width: 540px;
+    position: relative;
+    box-sizing: border-box;
+    border-left: 3px solid rgb(173, 118, 46);
+    background-color:rgb(5, 44, 12);
+}
+
+    /*transparencia*/
+.portada2__contenedorDerecha--base1{
+    height: 720px;
+    width: 540px;   
+    position: absolute;
+
+    top: 0px;
+    left: 0px;
+    background-image: url("../assets/patron-perejil.jpg");
+    opacity: 2%;
+
+}
+
+.portada2__contenedorDerecha--base2{
+    height: 720px;
+    width: 540px;   
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.portada2__contenedorDerecha--texto{
+    color: rgb(173, 118, 46);
+    font-size: 62px;
+    padding-top: 200px;
+    padding-left: 30px;
+}
+
+/* FIN INDEX */
+
+
+/*  N O S O T R O S */
+
+
+.tituloSeccion{
+    width: 100vw;
+    background-color: rgba(255, 166, 0, 0.11);
+
+}
+
+.tituloTextoSeccion{
+    font-family: 'Contrail One', cursive;
+    -webkit-text-stroke: 1px rgb(141, 141, 141);
+    color: transparent;
+    font-size: 60px;
+
+}
+
+.nosotros1{
+    width: 100vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center; /*alínea divs*/
+    align-content: center; /*alínea el contenido de los divs*/
+
+}
+
+.nosotros1__left{
+    
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    text-align: center;
+}
+.nosotros1Texto{
+    
+    width: 500px;
+    color:rgb(141, 141, 141);
+    font-size: 45px;
+    text-align: center;
+}
+
+.nosotros1__right{
+    
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+
+}
+
+#circulo{
+    height: 320px; /*desktop 460*/
+    width: 320px;
+    background-image: url(../assets/ciudad-vacia.jpg);
+    background-size: 840px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 270px;
+    opacity: 70%;
+
+}
+
+.nosotros2{
+    width: 100vw;
+    display:flex;
+    flex-direction: column-reverse;
+    align-items:center;
+    align-content: center;
+    position: relative;
+
+}
+
+
+
+#circulo2{
+    height: 320px;
+    width: 320px; 
+    background-image: url(../assets/gemelos.jpg);
+    background-size: 1080px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 270px;
+    opacity: 70%;
+}
+
+
+.nosotros2Texto{
+    width: 440px;
+    color: rgb(141, 141, 141);
+    font-size: 45px;
+    text-align: center;
+}
+
+/* FIN NOSOTROS*/
+
+
+/* P R O D U C T O S */
+
+.principal{
+    width: 100vw;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.principal__arriba{
+    width: 100vw;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.principal__texto{
+    color: rgb(141, 141, 141);
+    font-size: 62px;
+}
+
+.principal__abajo{
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 46px;
+}
+
+.contenedorTitulo{
+    width: 60vw;
+    margin: 0px auto; 
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.tituloTartas{
+    width: 60vw;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 20px;
+    border-color: rgb(199, 197, 197);
+    border-radius: 8px;
+    border-style: ridge;
+    border-width: 2px;
+}
+
+.tituloTartas__texto{
+    color: rgb(141, 141, 141);
+    font-size: 90px;
+}
+
+#circuloTartas{
+    height: 150px;
+    width: 150px;
+    background-image: url(../assets/tarta.jpg);
+    background-size: 300px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 270px;
+}
+
+#circuloBurgers{
+    height: 150px;
+    width: 150px;
+    background-image: url(../assets/burger.jpeg);
+    background-size: 200px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 270px;
+}
+
+.contenedorItems{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px auto;
+}
+
+.contenedorItems__col1{
+    width: 100%;
+}
+
+.contenedorItems__col2{
+    width: 100%;
+}
+
+.productoItem{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    margin: 0px auto;
+}
+
+.productoItem__titulo{
+    font-size: 42px;
+    color: rgb(194, 110, 0);
+}
+
+.productoItem__descripcion{
+    font-size: 28px;
+    color: rgb(94, 51, 2);
+}
+
+/*FIN PRODUCTOS*/
+
+/* C U L T U R A */
+
+.culturaContenedor{
+    width: 90vw;   
+    margin: auto; 
+    display: grid;
+    grid-template-areas: 
+    "area1"
+    "area2"
+    "area3"
+    "area4";
+    flex-direction: column;
+    padding-bottom: 100px;
+    justify-items: center;
+}
+
+.culturaFrame{
+    width: 440px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.culturaFrame__encabezado{
+    width: 440px;
+    height: 100px;
+    background-color: crimson;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.culturaFrame__titulo{
+    width: 440px;
+    height: 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.culturaFrame__titulo--texto{
+    font-size: 36px;
+    -webkit-text-stroke: 1px rgb(141, 141, 141);
+    color: transparent;
+}
+
+.culturaFrame__contenido{
+    width: 440px;
+    height: 250px;
+    background-color: rgb(141, 141, 141);
+    opacity: 30%;
+    border-radius:  0px 0px 20px 20px;
+}
+
+.area1{
+    grid-area: "area1";
+}
+.area2{
+    grid-area: "area2";
+}
+.area3{
+    grid-area: "area3";
+}
+.area4{
+    grid-area: "area4";
+}
+
+#fotoAlimentacion{
+    background-image: url(../assets/alimentacion.jpg);
+    background-size: 440px;
+    background-position:center;
+
+}
+
+#fotoBici{
+    background-image: url(../assets/cult\ bici.jpg);
+    background-size: 800px;
+    background-position:center;
+
+}
+/* FIN CULTURA */
+
+/* C O N T A C T O */
+
+.tituloContacto{
+    height: 140px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items:flex-end;
+}
+
+.contacto{
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    align-content: center;
+    padding-top: 40px;
+}
+
+.contacto__left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.contacto__right{
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contacto__right--texto{
+    font-size: 40px;
+}
+
+/* FIN CONTACTO */
+
+/*  F O O T E R */
+
+.footer{
+    height: 50px;
+    width: 100vw;
+    box-sizing: border-box;
+    border-top: 5px solid rgb(255, 255, 255);
+    background-color: rgb(63, 63, 63);
+    text-align: right;
+    color: white;
+    
+}
+.footer__textBA{
+    display: inline-block;
+    line-height: 50px;
+    padding-right: 30px;
+}
+
+/* FIN FOOTER */
+
+
+
+
+
+/*DESKTOP*/
+
+@media (min-width:620px){
+    
+    /* H E A D E R */
+
+    .nav{
+        height: 90px;
+        justify-content:center;
+
+    }
+
+    #navLogoMobile{
+        display: none;
+    }
+
+    #palabraMenu{
+        display: none;
+    }
+
+    #navMenu{
+        width: 100%;
+        margin:auto;
+        justify-self: unset;
+        align-self: unset;
+        padding-right: 0;
+        position:relative;    
+    }
+
+    .navSubmenu{
+        margin:auto;
+        width: 100%;
+        display:grid;
+        position: relative;
+        grid-template-columns:  repeat(5, 1fr);
+        gap: 10px;
+        grid-template-areas: 
+        "item1 item2 item3 item4 item5";
+        justify-items:center;
+        align-items: center;
+    }
+
+    .nav__items{
+        width:fit-content;
+        vertical-align: unset;
+        justify-self:unset;
+        list-style: none;
+        padding-right: 8px;
+        padding-left: 8px;
+        font-size: 30px; /*desktop 30*/
+    }
+
+    #navNosotros{
+        grid-area: "item1";        
+    }
+    #navProductos{
+        grid-area: "item2";
+    }
+    #navLogoDesktop{
+        grid-area: "item3";
+        display: initial;
+    }
+    #navCultura{
+        grid-area: "item4";
+    }
+    #navContacto{
+        grid-area: "item5";
+    }
+    
+    /* FIN HEADER */
+
+    /* I N D E X */
+
+    
+#portada__textGovinda{
+    font-size: 180px;
+}
+
+#portada__textVeggie{
+    font-size: 20px;  
+}
+
+#portada__textComidaCasera{
+    font-size: 114px;
+}
+
+#portada__textCongelado{
+    font-size: 48px;
+}
+
+#portada__button{
+    font-size: 36px;
+
+}
+
+.portada2{
+    flex-direction: row;
+    
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+    /* FIN INDEX */
+
+    /* N O S O T R OS */
+ 
+    .nosotros1{
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    .nosotros2{
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    #circulo{
+        height: 460px; 
+        width: 460px;
+    }
+    #circulo2{
+        height: 460px; 
+        width: 460px;
+    } 
+
+    /* FIN NOSOTROS */
+
+    /* P R O D U C T O S */
+
+    .principal__texto{
+        color: rgb(141, 141, 141);
+        font-size: 84px;
+    }
+    .tituloTartas{
+        flex-direction: row;
+        justify-content:space-evenly;
+        padding-bottom: 20px;
+    }
+    .tituloTartas__texto{
+        font-size: 120px;
+        
+    }
+    .contenedorItems{
+        width:100vw;
+        flex-direction: row;
+    }
+    .contenedorItems__col1{
+        width: 50%;
+    }
+    .contenedorItems__col2{
+        width: 50%;
+    }
+    .productoItem{
+        width: 40vw;
+
+    }   
+    /* FIN PRODUCTOS */
+
+    /* C U L T U R A */
+
+    .culturaContenedor{
+        display: grid;
+        grid-template-areas: 
+        "area area2"
+        "area3 area4";
+        padding-bottom: 100px;
+        justify-items: center;
+    }
+    /* FIN CULTURA */
+
+    /* C O N T A C T O */
+
+    .contacto{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* FIN CONTACTO */
+    
+}
+    

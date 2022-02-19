@@ -1,6 +1,7 @@
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    border: 0;
     box-sizing: border-box;
     font-family: 'Contrail One', cursive;
     text-align: center;
@@ -91,7 +92,7 @@ body{
     position: relative;
 }
   
-    .nav__button::before {
+.nav__button::before {
     content: "";
     position: absolute;
     display: block;
@@ -105,9 +106,18 @@ body{
     transition: transform 0.3s ease;
   }
   
-    .nav__button:hover::before {
+.nav__button:hover::before {
     transform: scaleX(1);
   }
+
+.nav__button--img{
+    
+    color: transparent;
+    position: relative;
+    opacity: 70%;
+    z-index: 10;
+}   
+  
 
 /* FIN HEADER */
 
@@ -164,20 +174,29 @@ body{
     padding-top: 10px;
     padding-right: 20px;
     padding-left: 20px;
-    border: 4px double rgb(255, 255, 255);
+    /*border: 4px double rgb(255, 255, 255);
     border-radius: 2px;
-    border-style:double;
+    border-style:double;*/
+    position: relative;
 }
 
-#portada__button:hover{
-    transition-duration: 1s;
-    -webkit-text-stroke: none;
-    color:rgb(255, 255, 255);
-    opacity: 50%;
-}
-
-#portada__button:not(:hover){
-    transition-duration: 1s;
+#portada__button::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 75%;
+    height: 3px;
+    bottom: 0;
+    left: 20px;
+    right: 5px;
+    background-color: rgba(255, 255, 255, 0.808);
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+  }
+  
+#portada__button:hover::before {
+    transform: scaleX(1);  
 }
 
 .portada2{
@@ -234,6 +253,32 @@ body{
     font-size: 62px;
     padding-top: 200px;
     padding-left: 30px;
+}
+
+.seccionIconos{
+    display:flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.seccionIconos__card{
+    width: 320px;
+    height: 400px;
+    align-self: center;
+    margin-bottom: 20px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.seccionIconos__card__img{
+    height: 300px;
+    width: 300px;
+    align-self: center;
+}
+
+.seccionIconos__card__p{
+    font-size: 40px;
 }
 
 /* FIN INDEX */
@@ -333,6 +378,11 @@ body{
     font-size: 45px;
     text-align: center;
 }
+
+/*NOSOTROS BIS*/
+
+
+
 
 /* FIN NOSOTROS*/
 
@@ -655,9 +705,35 @@ body{
         grid-area: "item2";
     }
     #navLogoDesktop{
+        
         grid-area: "item3";
         display: initial;
+        padding: 0;
+        position: relative;
+
+        border: 2px solid rgba(0, 0, 0, 0);
+        border-radius: 60px;
+        height: 64px;
+        width: 66px;
+        opacity: 80%;
     }
+
+    #navLogoDesktop:hover{
+        background-color: none;
+        box-sizing: border-box;
+        border-radius: 60px;
+        border: 2px solid rgb(194, 194, 194);
+        height: 64px;
+        width: 66px;
+        transition-duration: 0.7s;
+        
+    }
+
+    #navLogoDesktop:not(:hover){
+        transition-duration: 0.7s;
+    }
+   
+ 
     #navCultura{
         grid-area: "item4";
     }
@@ -697,6 +773,12 @@ body{
     align-content: center;
     align-items: center;
     justify-content: center;
+}
+
+.seccionIconos{
+    
+    flex-direction: row;
+    justify-content: space-around;
 }
 
     /* FIN INDEX */

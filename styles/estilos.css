@@ -300,84 +300,61 @@ body{
     font-size: 60px;
 
 }
+/*nosotros bis*/
 
-.nosotros1{
+
+.nosotros{
     width: 100vw;
-    display:flex;
-    flex-direction: column;
-    align-items: center; /*alínea divs*/
-    align-content: center; /*alínea el contenido de los divs*/
-
+    display: grid;
+    grid-template-areas:
+    "ar1"
+    "ar2"
+    "ar3"
+    "ar4";
 }
 
-.nosotros1__left{
-    
-    width: 540px;
-    display: flex;
-    flex-direction: column;
-    align-items:  center;
-    text-align: center;
+.nos1{
+    grid-area: "ar1";
 }
-.nosotros1Texto{
-    
-    width: 500px;
-    color:rgb(141, 141, 141);
-    font-size: 45px;
-    text-align: center;
+.nos2{
+    grid-area: "ar2";
 }
-
-.nosotros1__right{
-    
-    width: 540px;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-around;
-    align-items: center;
-
+.nos3{
+    grid-area: "ar3";
 }
-
-#circulo{
-    height: 320px; /*desktop 460*/
-    width: 320px;
-    background-image: url(../assets/ciudad-vacia.jpg);
-    background-size: 840px;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 270px;
-    opacity: 70%;
-
-}
-
-.nosotros2{
-    width: 100vw;
-    display:flex;
-    flex-direction: column-reverse;
-    align-items:center;
-    align-content: center;
-    position: relative;
-
+.nos4{
+    grid-area: "ar4";
 }
 
 
-
-#circulo2{
+.nosotros__texto{
     height: 320px;
-    width: 320px; 
-    background-image: url(../assets/gemelos.jpg);
-    background-size: 1080px;
-    background-position: center;
-    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.nosotros__texto__p{
+    font-size: 30px;
+    background-color: rgba(143, 143, 143, 0.123);   
+}
+
+.nosotros__img{
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nosotros__img__circulo{
+    height: 320px;
+    width: 320px;
     border-radius: 270px;
-    opacity: 70%;
+    opacity: 80%;
 }
 
-
-.nosotros2Texto{
-    width: 440px;
-    color: rgb(141, 141, 141);
-    font-size: 45px;
-    text-align: center;
-}
 
 /* FIN NOSOTROS*/
 
@@ -740,66 +717,118 @@ body{
 
     /* I N D E X */
 
-    
-#portada__textGovinda{
-    font-size: 180px;
-}
+        
+    #portada__textGovinda{
+        font-size: 180px;
+    }
 
-#portada__textVeggie{
-    font-size: 20px;  
-}
+    #portada__textVeggie{
+        font-size: 20px;  
+    }
 
-#portada__textComidaCasera{
-    font-size: 114px;
-}
+    #portada__textComidaCasera{
+        font-size: 114px;
+    }
 
-#portada__textCongelado{
-    font-size: 48px;
-}
+    #portada__textCongelado{
+        font-size: 48px;
+    }
 
-#portada__button{
-    font-size: 36px;
+    #portada__button{
+        font-size: 36px;
 
-}
+    }
 
-.portada2{
-    flex-direction: row;
-    
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-}
+    .portada2{
+        flex-direction: row;
+        
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
 
-.seccionIconos{
-    
-    flex-direction: row;
-    justify-content: space-around;
-}
+    .seccionIconos{
+        
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
     /* FIN INDEX */
 
     /* N O S O T R OS */
  
-    .nosotros1{
-        flex-direction: row;
-        justify-content: center;
-        padding-top: 20px;
+    /* nosotros bis */
+
+    .nosotros{   
+        width: 90vw;
+        margin: 0 auto;
+        grid-template-columns: 3fr;
+        
+    
     }
 
-    .nosotros2{
-        flex-direction: row;
-        justify-content: center;
-        padding-top: 20px;
+    .nos1{
+        
+        grid-column-start: 1;
+        grid-column-end: 3;
+        text-align:end;
     }
 
-    #circulo{
-        height: 460px; 
-        width: 460px;
+    .nos2{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        
     }
-    #circulo2{
-        height: 460px; 
-        width: 460px;
-    } 
+    
+    .nos4{
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        
+    }
+
+    .nos3{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        
+        
+    }
+
+    
+    .nosotros__texto{
+        height: 320px;
+    }
+    
+    .nosotros__texto__p{
+        font-size: 30px;
+        background-color:rgba(143, 143, 143, 0.123);
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 166, 0, 0.11));
+        
+    }
+    /*transi*/
+    
+      
+    
+    .nosotros__img{
+        height: 320px;
+        align-content: center;
+        justify-items: center;
+        animation-duration: 3s;
+        animation-name: respira;
+    }
+
+    @keyframes respira {
+        50%{transform: scale(1);}
+        80%{transform: scale(1.1);} ;
+      }
+    
+    .nosotros__img__circulo{
+        height: 320px;
+        width: 320px; 
+        background-position: left;
+        border-radius: 270px;
+        opacity: 80%;
+    }
 
     /* FIN NOSOTROS */
 

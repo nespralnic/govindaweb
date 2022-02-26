@@ -1,0 +1,887 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Contrail One', cursive;
+    text-align: center;
+}
+
+/*
+
+secciones:
+    header
+    index
+    
+    nosotros
+    cultura
+    contacto
+    footer
+
+    productos
+*/
+
+body{
+    background-image: url(../assets/fondo-pattern-color2.jpg);
+    background-repeat: repeat;
+}
+
+/* H E A D E R */
+
+.nav{
+    width: 100vw;
+    height: 70px;
+    justify-content:baseline;
+    align-content: center;
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: "logo  menu";
+    background-color: rgba(0, 0, 0, 0.041);
+}
+
+
+#navLogoMobile{
+    grid-area: "logo";
+    width: 20%;
+    padding-left: 20%;
+}
+
+#navMenu{
+
+    grid-area: "menu";
+    width: 20%;
+    justify-self: flex-end;
+    align-self: center;
+    padding-right: 40%;
+    list-style: none;
+    font-size: 30px;
+    position:relative;
+}
+
+.navSubmenu{
+    display: none;
+    position: absolute;
+    z-index: 10;
+}
+
+#navLogoDesktop{
+    display: none;
+}
+
+@media (max-width: 648px) {
+    #navMenu:hover > .navSubmenu{
+        display:block;
+        background-color: rgba(255, 255, 255, 0.651);
+        border-radius: 0px;
+        border: 1px solid rgb(0, 0, 0);
+    }
+}
+
+.nav__items{
+    vertical-align: middle;
+    justify-self: flex-start;
+    list-style: none;
+    padding: 10px;
+    font-size: 20px; /*desktop 30*/
+}
+
+.nav__button{
+    text-decoration: none;
+    -webkit-text-stroke: 1px rgb(141, 141, 141);
+    color: transparent;
+    position: relative;
+}
+  
+.nav__button::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(139, 139, 139, 0.63);
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+  }
+  
+.nav__button:hover::before {
+    transform: scaleX(1);
+  }
+
+.nav__button--img{
+    
+    color: transparent;
+    position: relative;
+    opacity: 70%;
+    z-index: 10;
+}   
+  
+
+/* FIN HEADER */
+
+/* I N D E X */
+
+.portada_imagen{
+    background-image: url(../assets/fondo-falafell.jpeg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: 100vw;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: 100vw;
+}
+
+.portada{
+
+    
+    margin: auto;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;  
+}
+
+
+#portada__textGovinda{
+    padding-top: 20px; 
+    font-size: 120px; /*180*/
+    transform: rotate(-3deg);
+}
+
+#portada__textVeggie{
+    font-size: 13px;  /*20*/
+    padding-bottom: 20px;  
+}
+
+#portada__textComidaCasera{
+    font-size: 80px; /*114*/
+}
+
+#portada__textCongelado{
+    font-size: 32px; /*48*/
+    padding-bottom: 60px;
+}
+
+.contenedorButton{
+    padding-bottom: 50px;    
+}
+
+#portada__button{
+    color:rgb(255, 255, 255);
+    font-size: 24px; /*36*/
+    text-decoration: none;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    /*border: 4px double rgb(255, 255, 255);
+    border-radius: 2px;
+    border-style:double;*/
+    position: relative;
+}
+
+#portada__button::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 75%;
+    height: 3px;
+    bottom: 0;
+    left: 20px;
+    right: 5px;
+    background-color: rgba(255, 255, 255, 0.808);
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+  }
+  
+#portada__button:hover::before {
+    transform: scaleX(1);  
+}
+
+.portada2{
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    
+    align-content: center;
+    align-items: center;
+}
+
+.portada2__contenedorIzquierda{
+    height: 720px;
+    width: 540px;
+    box-sizing: border-box;
+    border-right: 3px solid rgb(173, 118, 46);
+    background-image: url(../assets/burg1.jpeg);
+    background-position:bottom;
+    background-size: 540px;
+}
+
+.portada2__contenedorDerecha{
+    height: 720px;
+    width: 540px;
+    position: relative;
+    box-sizing: border-box;
+    border-left: 3px solid rgb(173, 118, 46);
+    background-color:rgb(5, 44, 12);
+}
+
+    /*transparencia*/
+.portada2__contenedorDerecha--base1{
+    height: 720px;
+    width: 540px;   
+    position: absolute;
+
+    top: 0px;
+    left: 0px;
+    background-image: url("../assets/patron-perejil.jpg");
+    opacity: 2%;
+
+}
+
+.portada2__contenedorDerecha--base2{
+    height: 720px;
+    width: 540px;   
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.portada2__contenedorDerecha--texto{
+    color: rgb(173, 118, 46);
+    font-size: 62px;
+    padding-top: 200px;
+    padding-left: 30px;
+}
+
+.seccionIconos{
+    display:flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.seccionIconos__card{
+    width: 320px;
+    height: 400px;
+    align-self: center;
+    margin-bottom: 20px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.seccionIconos__card__img{
+    height: 300px;
+    width: 300px;
+    align-self: center;
+}
+
+.seccionIconos__card__p{
+    font-size: 40px;
+}
+
+/* FIN INDEX */
+
+
+/*  N O S O T R O S */
+
+
+.tituloSeccion{
+    width: 100vw;
+    background-color: rgba(255, 166, 0, 0.11);
+
+}
+
+.tituloTextoSeccion{
+    font-family: 'Contrail One', cursive;
+    -webkit-text-stroke: 1px rgb(141, 141, 141);
+    color: transparent;
+    font-size: 60px;
+
+}
+/*nosotros bis*/
+
+
+.nosotros{
+    width: 100vw;
+    display: grid;
+    grid-template-areas:
+    "ar1"
+    "ar2"
+    "ar3"
+    "ar4";
+}
+
+.nos1{
+    grid-area: "ar1";
+}
+.nos2{
+    grid-area: "ar2";
+}
+.nos3{
+    grid-area: "ar3";
+}
+.nos4{
+    grid-area: "ar4";
+}
+
+
+.nosotros__texto{
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.nosotros__texto__p{
+    font-size: 30px;
+    background-color: rgba(143, 143, 143, 0.123);   
+}
+
+.nosotros__img{
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nosotros__img__circulo{
+    height: 320px;
+    width: 320px;
+    border-radius: 270px;
+    opacity: 80%;
+}
+
+
+/* FIN NOSOTROS*/
+
+
+/* P R O D U C T O S */
+
+.principal{
+    width: 100vw;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.principal__arriba{
+    width: 100vw;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.principal__texto{
+    color: rgb(141, 141, 141);
+    font-size: 62px;
+}
+
+.principal__abajo{
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 46px;
+}
+
+.contenedorTitulo{
+    width: 60vw;
+    margin: 0px auto; 
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.tituloTartas{
+    width: 60vw;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 20px;
+    border-color: rgb(199, 197, 197);
+    border-radius: 8px;
+    border-style: ridge;
+    border-width: 2px;
+}
+
+.tituloTartas__texto{
+    color: rgb(141, 141, 141);
+    font-size: 90px;
+}
+
+#circuloTartas{
+    height: 150px;
+    width: 150px;
+    background-image: url(../assets/tarta.jpg);
+    background-size: 300px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 270px;
+}
+
+#circuloBurgers{
+    height: 150px;
+    width: 150px;
+    background-image: url(../assets/burger.jpeg);
+    background-size: 200px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 270px;
+}
+
+.contenedorItems{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px auto;
+}
+
+.contenedorItems__col1{
+    width: 100%;
+}
+
+.contenedorItems__col2{
+    width: 100%;
+}
+
+.productoItem{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    margin: 0px auto;
+}
+
+.productoItem__titulo{
+    font-size: 42px;
+    color: rgb(194, 110, 0);
+}
+
+.productoItem__descripcion{
+    font-size: 28px;
+    color: rgb(94, 51, 2);
+}
+
+/*FIN PRODUCTOS*/
+
+/* C U L T U R A */
+
+.culturaContenedor{
+    width: 90vw;   
+    margin: auto; 
+    display: grid;
+    grid-template-areas: 
+    "area1"
+    "area2"
+    "area3"
+    "area4";
+    flex-direction: column;
+    padding-bottom: 100px;
+    justify-items: center;
+}
+
+.culturaFrame{
+    width: 440px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.culturaFrame__encabezado{
+    width: 440px;
+    height: 100px;
+    background-color: crimson;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.culturaFrame__titulo{
+    width: 440px;
+    height: 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.culturaFrame__titulo--texto{
+    font-size: 36px;
+    -webkit-text-stroke: 1px rgb(141, 141, 141);
+    color: transparent;
+}
+
+.culturaFrame__contenido{
+    width: 440px;
+    height: 250px;
+    background-color: rgb(141, 141, 141);
+    opacity: 30%;
+    border-radius:  0px 0px 20px 20px;
+}
+
+.area1{
+    grid-area: "area1";
+}
+.area2{
+    grid-area: "area2";
+}
+.area3{
+    grid-area: "area3";
+}
+.area4{
+    grid-area: "area4";
+}
+
+#fotoAlimentacion{
+    background-image: url(../assets/alimentacion.jpg);
+    background-size: 440px;
+    background-position:center;
+
+}
+
+#fotoBici{
+    background-image: url(../assets/cult\ bici.jpg);
+    background-size: 800px;
+    background-position:center;
+
+}
+/* FIN CULTURA */
+
+/* C O N T A C T O */
+
+.tituloContacto{
+    height: 140px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items:flex-end;
+}
+
+.contacto{
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    align-content: center;
+    padding-top: 40px;
+}
+
+.contacto__left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.contacto__right{
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contacto__right--texto{
+    font-size: 40px;
+}
+
+/* FIN CONTACTO */
+
+/*  F O O T E R */
+
+.footer{
+    height: 50px;
+    width: 100vw;
+    box-sizing: border-box;
+    border-top: 5px solid rgb(255, 255, 255);
+    background-color: rgb(63, 63, 63);
+    text-align: right;
+    color: white;
+    
+}
+.footer__textBA{
+    display: inline-block;
+    line-height: 50px;
+    padding-right: 30px;
+}
+
+/* FIN FOOTER */
+
+
+
+
+
+/*DESKTOP*/
+
+@media (min-width:620px){
+    
+    /* H E A D E R */
+
+    .nav{
+        height: 90px;
+        justify-content:center;
+
+    }
+
+    #navLogoMobile{
+        display: none;
+    }
+
+    #palabraMenu{
+        display: none;
+    }
+
+    #navMenu{
+        width: 100%;
+        margin:auto;
+        justify-self: unset;
+        align-self: unset;
+        padding-right: 0;
+        position:relative;    
+    }
+
+    .navSubmenu{
+        margin:auto;
+        width: 100%;
+        display:grid;
+        position: relative;
+        grid-template-columns:  repeat(5, 1fr);
+        gap: 10px;
+        grid-template-areas: 
+        "item1 item2 item3 item4 item5";
+        justify-items:center;
+        align-items: center;
+    }
+
+    .nav__items{
+        width:fit-content;
+        vertical-align: unset;
+        justify-self:unset;
+        list-style: none;
+        padding-right: 8px;
+        padding-left: 8px;
+        font-size: 30px; /*desktop 30*/
+    }
+
+    #navNosotros{
+        grid-area: "item1";        
+    }
+    #navProductos{
+        grid-area: "item2";
+    }
+    #navLogoDesktop{
+        
+        grid-area: "item3";
+        display: initial;
+        padding: 0;
+        position: relative;
+
+        border: 2px solid rgba(0, 0, 0, 0);
+        border-radius: 60px;
+        height: 64px;
+        width: 66px;
+        opacity: 80%;
+    }
+
+    #navLogoDesktop:hover{
+        background-color: none;
+        box-sizing: border-box;
+        border-radius: 60px;
+        border: 2px solid rgb(194, 194, 194);
+        height: 64px;
+        width: 66px;
+        transition-duration: 0.7s;
+        
+    }
+
+    #navLogoDesktop:not(:hover){
+        transition-duration: 0.7s;
+    }
+   
+ 
+    #navCultura{
+        grid-area: "item4";
+    }
+    #navContacto{
+        grid-area: "item5";
+    }
+    
+    /* FIN HEADER */
+
+    /* I N D E X */
+
+        
+    #portada__textGovinda{
+        font-size: 180px;
+    }
+
+    #portada__textVeggie{
+        font-size: 20px;  
+    }
+
+    #portada__textComidaCasera{
+        font-size: 114px;
+    }
+
+    #portada__textCongelado{
+        font-size: 48px;
+    }
+
+    #portada__button{
+        font-size: 36px;
+
+    }
+
+    .portada2{
+        flex-direction: row;
+        
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .seccionIconos{
+        
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /* FIN INDEX */
+
+    /* N O S O T R OS */
+ 
+    /* nosotros bis */
+
+    .nosotros{   
+        width: 90vw;
+        margin: 0 auto;
+        grid-template-columns: 3fr;
+        
+    
+    }
+
+    .nos1{
+        
+        grid-column-start: 1;
+        grid-column-end: 3;
+        text-align:end;
+    }
+
+    .nos2{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        
+    }
+    
+    .nos4{
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        
+    }
+
+    .nos3{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        
+        
+    }
+
+    
+    .nosotros__texto{
+        height: 320px;
+    }
+    
+    .nosotros__texto__p{
+        font-size: 30px;
+        background-color:rgba(143, 143, 143, 0.123);
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 166, 0, 0.11));
+        
+    }
+    /*transi*/
+    
+      
+    
+    .nosotros__img{
+        height: 320px;
+        align-content: center;
+        justify-items: center;
+        animation-duration: 3s;
+        animation-name: respira;
+    }
+
+    @keyframes respira {
+        50%{transform: scale(1);}
+        80%{transform: scale(1.1);} ;
+      }
+    
+    .nosotros__img__circulo{
+        height: 320px;
+        width: 320px; 
+        background-position: left;
+        border-radius: 270px;
+        opacity: 80%;
+    }
+
+    /* FIN NOSOTROS */
+
+    /* P R O D U C T O S */
+
+    .principal__texto{
+        color: rgb(141, 141, 141);
+        font-size: 84px;
+    }
+    .tituloTartas{
+        flex-direction: row;
+        justify-content:space-evenly;
+        padding-bottom: 20px;
+    }
+    .tituloTartas__texto{
+        font-size: 120px;
+        
+    }
+    .contenedorItems{
+        width:100vw;
+        flex-direction: row;
+    }
+    .contenedorItems__col1{
+        width: 50%;
+    }
+    .contenedorItems__col2{
+        width: 50%;
+    }
+    .productoItem{
+        width: 40vw;
+
+    }   
+    /* FIN PRODUCTOS */
+
+    /* C U L T U R A */
+
+    .culturaContenedor{
+        display: grid;
+        grid-template-areas: 
+        "area area2"
+        "area3 area4";
+        padding-bottom: 100px;
+        justify-items: center;
+    }
+    /* FIN CULTURA */
+
+    /* C O N T A C T O */
+
+    .contacto{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* FIN CONTACTO */
+    
+}
+    

@@ -1,0 +1,32 @@
+.seccionIconos{
+    display:flex;
+    flex-direction: column;
+    margin-top: 30px;
+    opacity: 80%;
+    width: 100vw;
+    
+
+    .seccionIconos__card{
+        width: 320px;
+        height: 300px;
+        align-self: center;
+        margin-bottom: 20px;
+        
+        display: flex;
+        flex-direction: column;
+        
+        .seccionIconos__card__img{
+            height: 230px;
+            width: 230px;
+            align-self: center;
+        }
+
+        .seccionIconos__card__p{
+            font-size: 40px;
+        }
+    }
+    @media (min-width:620px){
+        flex-direction: row;
+        justify-content: space-around;
+    }   
+}

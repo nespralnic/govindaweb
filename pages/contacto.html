@@ -6,48 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">	
-    <link rel="stylesheet" href="../styles/estilos.css">
+    <link rel="stylesheet" href="../css/estilos.css">
     <!-- animate-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
-<body>
+<body class="fondo">
     <header>
         <nav>
-            <ul class="nav" >
-                <li class="nav__items" id="navLogoMobile"> <a class="nav__button" id="nav__button--img" href="../index.html"><img src="../assets/Govinda-negativo-negro base.jpg"  height="60" alt=""></a></li></li>
-                <li id="navMenu"><p id="palabraMenu">MENU</p>
+            <ul class="nav">  
+                <li class="nav__mobile"> 
+                    <a class="nav__button--img" href="../index.html"><img src="../assets/Govinda-negativo-negro base.svg"  height="60" alt=""></a>
+                </li>
+                <li class="nav__menu">
+                    <p id="palabraMenu">MENU</p>
                     <ul class="navSubmenu">
-                        <li class="nav__items" id="navNosotros"> <a class="nav__button" href="../pages/nosotros.html">  nosotros</a></li>
-                        <li class="nav__items" id="navProductos"> <a class="nav__button" href="../pages/productos.html"> productos</a></li>
-                        <li class="nav__items" id="navLogoDesktop"> <a class="nav__button" id="nav__button--img" href="../index.html"><img src="../assets/Govinda-negativo-negro base.jpg"  height="60" alt=""></a></li>
-                        <li class="nav__items" id="navCultura"> <a class="nav__button" href="../pages/cultura.html"> cultura</a></li>
-                        <li class="nav__items" id="navContacto"> <a class="nav__button" href="#"> contacto</a></li>
+                        <li class="nav__items" > <a class="nav__button" href="../pages/nosotros.html">  nosotros</a></li>
+                        <li class="nav__items" > <a class="nav__button" href="../pages/productos.html"> productos</a></li>
+                        <li class="nav__items--pad" > <a class="nav__button--imgdesk" href="../index.html">
+                            <img src="../assets/Govinda-negativo-negro base.svg"  height="60" alt=""></a></li>
+                        <li class="nav__items" > <a class="nav__button" href="../pages/cultura.html"> cultura</a></li>
+                        <li class="nav__items" > <a class="nav__button" href="#"> contacto</a></li>
                     </ul>
                 </li>
             </ul>
             
         </nav>
     </header>
-    <main>
-        <div class="tituloSeccion">
-            <a name="contacto"><p class="tituloTextoSeccion animate__animated animate__slideInRight "  > CONTACTO</p></a>
-        </div>
 
-        <div class="contacto">
+    <main>
+        
+
+        <div class="contacto fondoContacto">
             <div class="contacto__left">
-                <section>
+                
 
                     <form id="formulario" action=""> 
                         <div>
-                            <p><label for="nombre">Nombre</label>
-                                <input type="text"></p>
-                            <p><label for="apellido">Apellido</label>
-                                <input type="text"></p>
-                            <p><label for="mail" >eMail</label>
-                                <input type="text" placeholder="ejemplo@mail.com"></p>
+                            <p><label for="nombre" >Nombre</label></p>
+                            <p> <input type="text" size="46"></p>
+                            <p><label for="apellido">Apellido</label></p>
+                            <p><input type="text" size="46"></p>
+                            <p><label for="mail" >eMail</label></p>
+                            <p><input type="text" size="46"></p>
                         </div>
+                        <br>    
                         <div>
-                            <textarea name="contenido" id="contenido" cols="29" rows="15" placeholder="ingrese un comentario"></textarea>
+                            <textarea name="contenido" id="contenido" cols="46" rows="10" placeholder="ingrese un comentario"></textarea>
                         </div>
                         <div>
                             <input type="submit" value="Enviar">
@@ -55,7 +59,7 @@
                         </div>
                     </form>
                 
-                </section>
+            
             </div>
             <div class="contacto__right">
                 <p class="contacto__right--texto">MANDANOS TU MENSAJE EXPERIENCIA O CONSULTA POR PEDIDOS ESPECIALES</p>

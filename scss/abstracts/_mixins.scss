@@ -1,0 +1,6 @@
+
+@mixin mixFondo($fondoFoto,$fondoColor){
+    background-color: $fondoColor;
+    background-image: $fondoFoto;
+    background-repeat: repeat;
+}

@@ -1,0 +1,51 @@
+.contacto{
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 30px;
+    padding-bottom: 75px;
+    
+    .contacto__left{
+        
+        justify-content: center;
+        padding-top: 40px;
+        
+        
+        #formulario{
+            display: flex;
+            flex-direction: column;
+        }
+        @media (min-width:$ancho-mobile){
+            width: 50%; 
+        }
+    }
+    
+    .contacto__right{
+        
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        .contacto__right--texto{
+            font-size: 40px;
+            width: 80%;
+            margin: 20px auto;
+        }
+        @media (min-width:$ancho-mobile){
+            width: 50%; 
+        }
+    }
+
+    @media (min-width:620px){
+            flex-direction: row;
+            justify-content: center;
+    }
+    
+    
+}
+
+
+
+
+

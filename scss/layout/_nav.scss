@@ -1,0 +1,170 @@
+
+.nav{
+    
+    width: 100vw;
+    height: 70px;
+    justify-content:baseline;
+    align-content: center;
+    display:grid;
+    grid-template-columns: auto auto;
+    background-color: rgba(0, 0, 0, 0.041);
+    
+
+    @media (min-width:$ancho-mobile){
+        height: 90px;
+        justify-content:center;
+    }
+    
+    .nav__mobile{
+        vertical-align: middle;
+        justify-self: flex-start;
+        list-style: none;
+        font-size: 20px; 
+        
+
+        .nav__button--img{
+    
+            padding-left: 20%;
+            color: transparent;
+            position: relative;
+            opacity: 70%;
+            z-index: 10;
+
+            @media (min-width:$ancho-mobile){
+                display:none;
+            }
+        }      
+    }
+
+    .nav__menu{
+
+            justify-self: flex-end;
+            align-self: center;
+            padding-right: 20%;
+            list-style: none;
+            font-size: 30px;
+            position:relative;  
+            
+            &:hover > .navSubmenu{
+                @media (max-width: $ancho-mobile){
+                
+                    display: block;
+                    width: 100vw;
+                    background-color: rgba(255, 255, 255, 0.808);
+                    right: 0vw;
+                                     
+                }
+                
+                
+            }    
+            
+
+            .navSubmenu{
+                display: none;
+                position: absolute;
+                z-index: 10;
+                
+                
+                .nav__items--pad{
+                    display:none;
+                    list-style: none;
+                    margin-left: 10px;
+                    
+                    
+                    @media (min-width:620px){
+                        display: initial;
+                        list-style: none;
+                        border: 2px solid rgba(212, 212, 212, 0);
+                        border-radius: 60px;
+                        height: 64px;
+                        width: 66px;
+
+                        &:hover{
+                            border: 2px solid $naranja;
+                            transition: 0.7s;
+
+                        }
+                        &:not(:hover){
+                            transition: 0.7s;
+                        }
+                        
+                        .nav__button--imgdesk{
+                            opacity:65%;
+                        }
+                            
+                            
+                    }
+                }
+                
+                .nav__items{
+
+                    vertical-align: middle;
+                    justify-self: flex-start;
+                    list-style: none;
+                    padding: 10px;
+                    font-size: 20px; 
+                    
+                    @media (min-width:620px){
+                        width:fit-content;
+                        vertical-align: unset;
+                        justify-self:unset;
+                        list-style: none;
+                        padding-right: 8px;
+                        padding-left: 8px;
+                        font-size: 30px;    
+                    }   
+                    
+                    .nav__button{
+                        text-decoration: none;
+                        -webkit-text-stroke: 1px rgb(141, 141, 141);
+                        color: transparent;
+                        position: relative;
+    
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            display: block;
+                            width: 100%;
+                            height: 2px;
+                            bottom: 0;
+                            left: 0;
+                            background-color: $naranja;
+                            transform: scaleX(0);
+                            transform-origin: top left;
+                            transition: transform 0.3s ease;
+                        }
+                        &:hover::before {
+                            transform: scaleX(1);
+                        }
+                    }                    
+                } 
+
+                @media (min-width:620px){
+                    margin:auto;
+                    width: 100%;
+                    display:grid;
+                    position: relative;
+                    grid-template-columns:  repeat(5, 1fr);
+                    gap: 10px;
+                    justify-items:center;
+                    align-items: center;
+                }
+            }
+            
+            @media (min-width:620px){
+                width: 100%;
+                margin:auto;
+                justify-self: unset;
+                align-self: unset;
+                padding-right: 0;
+                position:relative;    
+                
+        
+                #palabraMenu{
+                    display: none;
+                } 
+            }
+    
+    
+    }
+}

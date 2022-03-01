@@ -1,0 +1,22 @@
+.galeria{
+    height: 250px;
+    display: flex;
+
+    .galeria__contenedorFoto{
+        height:100%;
+        width: 16.66vw;
+        position: relative;
+        overflow: hidden;
+        background-color: salmon;
+    }
+    .galeria__img{
+        
+        
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    
+        
+    }
+    
+}

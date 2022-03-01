@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./css/estilos.css">
     <!-- animate-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
 </head>
 <body>
     <header>
@@ -49,15 +51,28 @@
         </section>
          
         <section class="seccionIconos fondo">
-            <div class="seccionIconos__card">
+            <div class="seccionIconos__card" 
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+            data-aos-once="true"
+            >
                 <img class="seccionIconos__card__img" src="assets/champis.svg" alt="">
                 <p class="seccionIconos__card__p">Vegan</p>
             </div>
-            <div class="seccionIconos__card">
+            <div class="seccionIconos__card"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="700"
+            data-aos-once="true">
                 <img class="seccionIconos__card__img" src="assets/queso.svg" alt="">
                 <p class="seccionIconos__card__p">Vegetariano</p>
             </div>
-            <div class="seccionIconos__card">
+            <div class="seccionIconos__card" 
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="950"
+            data-aos-once="true">
                 <img class="seccionIconos__card__img" src="assets/glutenfree.svg" alt="">
                 <p class="seccionIconos__card__p">Sin TACC</p>
             </div>
@@ -74,4 +89,8 @@
     <footer class="footer">
         <p class="footer__textBA"> 2022 | Buenos Aires</p>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>

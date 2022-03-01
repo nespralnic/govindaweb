@@ -2,6 +2,7 @@
     width: 100vw;
     background-image: url(../assets/fondo-falafell.jpeg);
     background-position:center;
+    background-attachment: fixed;
     background-repeat:no-repeat;
     background-size: auto;
 
@@ -15,7 +16,7 @@
         
         #portada__textGovinda{
             padding-top: 20px; 
-            font-size: 110px; 
+            font-size: 90px; 
             transform: rotate(-3deg);
             width: 80vw;
             text-align: center;

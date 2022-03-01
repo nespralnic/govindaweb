@@ -114,8 +114,8 @@
 
 
     .nosotros{   
-        width: 90vw;
-        margin: 0 auto;
+        width: 100vw;
+        padding: 5% 10%;
         grid-template-columns: 3fr;
         
 
@@ -165,10 +165,13 @@
 
     .nosotros__img{
         height: 320px;
+
         align-content: center;
         justify-items: center;
         animation-duration: 3s;
         animation-name: respira;
+        
+
     }
 
     @keyframes respira {
@@ -179,6 +182,7 @@
     .nosotros__img__circulo{
         height: 320px;
         width: 320px; 
+        object-fit: cover;
         background-position: left;
         border-radius: 270px;
         opacity: 80%;

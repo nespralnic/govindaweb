@@ -1,4 +1,5 @@
 /* abstracts */
+/*$naranja: rgb(194, 110, 0);*/
 /* base */
 * {
   margin: 0;
@@ -50,12 +51,12 @@ html {
       justify-content: center; } }
   .nav .nav__mobile {
     vertical-align: middle;
-    justify-self: flex-start;
     list-style: none;
-    font-size: 20px; }
+    font-size: 20px;
+    display: flex;
+    justify-content: left; }
     .nav .nav__mobile .nav__button--img {
-      padding-left: 20%;
-      width: 100%;
+      width: 70%;
       color: transparent;
       position: relative;
       opacity: 70%;
@@ -64,9 +65,9 @@ html {
         .nav .nav__mobile .nav__button--img {
           display: none; } }
   .nav .nav__menu {
-    justify-self: flex-end;
+    justify-self: center;
     align-self: center;
-    width: 100%;
+    width: 90%;
     list-style: none;
     font-size: 30px;
     position: relative;
@@ -74,13 +75,13 @@ html {
     box-sizing: border-box; }
     @media (max-width: 620px) {
       .nav .nav__menu:hover {
-        background-color: #ffbc6f; } }
+        background-color: rgba(219, 219, 219, 0.8); } }
     @media (max-width: 620px) {
       .nav .nav__menu:hover > .navSubmenu {
         display: block;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.808);
-        border-bottom: 10px solid #ffbc6f; } }
+        background-image: linear-gradient(rgba(219, 219, 219, 0.8), #9e9c9c);
+        /*border-bottom: 8px solid rgb(158, 156, 156);*/ } }
     .nav .nav__menu .navSubmenu {
       display: none;
       position: absolute;
@@ -110,17 +111,22 @@ html {
         /*text-align: right;*/
         list-style: none;
         padding: 10px;
-        font-size: 30px; }
+        font-size: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.459);
+        padding-top: 7px; }
         @media (min-width: 620px) {
           .nav .nav__menu .navSubmenu .nav__items {
             width: fit-content;
             vertical-align: unset;
             justify-self: unset;
             list-style: none;
+            padding-bottom: 0;
             padding-right: 8px;
-            padding-left: 8px; } }
+            padding-left: 8px;
+            border-top: 0;
+            padding-top: 0; } }
         .nav .nav__menu .navSubmenu .nav__items .nav__button {
-          color: #ffbc6f;
+          color: #363636;
           position: relative;
           text-decoration: none; }
           @media (min-width: 620px) {
@@ -136,6 +142,7 @@ html {
                 bottom: 56px;
                 left: 0;
                 background-color: #ffbc6f;
+                opacity: 70%;
                 transform: scaleY(0);
                 transform-origin: top left;
                 transition: transform 0.3s ease; }
@@ -168,7 +175,7 @@ html {
           display: none; } }
 
 .footer {
-  height: 30px;
+  height: 100px;
   width: 100vw;
   box-sizing: border-box;
   background-color: #ffbc6f;
@@ -187,6 +194,7 @@ html {
   width: 100vw;
   background-image: url(../assets/fondo-falafell.jpeg);
   background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: auto; }
   .portada_imagen .portada {
@@ -197,7 +205,7 @@ html {
     flex-direction: column; }
     .portada_imagen .portada #portada__textGovinda {
       padding-top: 20px;
-      font-size: 110px;
+      font-size: 90px;
       transform: rotate(-3deg);
       width: 80vw;
       text-align: center;
@@ -248,40 +256,45 @@ html {
 
 .seccionIconos {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   width: 100vw;
-  padding-top: 20px;
-  padding-bottom: 50px; }
+  padding-top: 100px;
+  padding-bottom: 100px; }
   .seccionIconos .seccionIconos__card {
-    width: 320px;
-    height: 280px;
+    width: 120px;
+    height: 105px;
     align-self: center;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 10px;
-    background-color: rgba(0, 0, 0, 0.062);
-    border-radius: 10px;
     display: flex;
     flex-direction: column; }
     .seccionIconos .seccionIconos__card .seccionIconos__card__img {
-      height: 230px;
-      width: 230px;
+      height: 90px;
+      width: 90px;
       align-self: center; }
+      @media (min-width: 620px) {
+        .seccionIconos .seccionIconos__card .seccionIconos__card__img {
+          height: 230px;
+          width: 230px; } }
     .seccionIconos .seccionIconos__card .seccionIconos__card__p {
-      font-size: 40px; }
+      font-size: 15px; }
+      @media (min-width: 620px) {
+        .seccionIconos .seccionIconos__card .seccionIconos__card__p {
+          font-size: 40px; } }
     @media (min-width: 620px) {
       .seccionIconos .seccionIconos__card {
-        background-color: rgba(0, 0, 0, 0); } }
-  @media (min-width: 620px) {
-    .seccionIconos {
-      flex-direction: row;
-      justify-content: space-evenly; } }
+        width: 320px;
+        height: 280px; } }
 
 .galeria {
   height: 250px;
-  display: flex; }
+  display: flex;
+  width: 100vw;
+  padding-top: 20px;
+  background-color: #ffbc6f; }
   .galeria .galeria__contenedorFoto {
     height: 100%;
-    width: 16.66vw;
+    width: 17vw;
     position: relative;
     overflow: hidden;
     background-color: salmon; }
@@ -289,6 +302,10 @@ html {
     width: 100%;
     height: 100%;
     object-fit: cover; }
+  @media (min-width: 620px) {
+    .galeria {
+      height: 500px;
+      padding-top: 30px; } }
 
 /* nosotros */
 /*nosotros bis*/
@@ -366,8 +383,8 @@ html {
     border-radius: 270px;
     opacity: 80%; }
   .nosotros {
-    width: 90vw;
-    margin: 0 auto;
+    width: 100vw;
+    padding: 5% 10%;
     grid-template-columns: 3fr; }
   .nos1 {
     grid-column-start: 1;
@@ -404,6 +421,7 @@ html {
   .nosotros__img__circulo {
     height: 320px;
     width: 320px;
+    object-fit: cover;
     background-position: left;
     border-radius: 270px;
     opacity: 80%; } }
@@ -565,7 +583,7 @@ html {
 
 /* cultura */
 .culturaContenedor {
-  width: 90vw;
+  width: 100vw;
   margin: auto;
   display: grid;
   grid-template-areas: "area1" "area2" "area3" "area4";

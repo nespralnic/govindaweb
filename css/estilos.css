@@ -1,6 +1,7 @@
 /* abstracts */
 /*$naranja: rgb(194, 110, 0);*/
 /* base */
+@import url("https://fonts.googleapis.com/css2?family=Contrail+One&family=Dongle:wght@300&family=Montserrat:wght@400;500;600&family=Oswald:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -71,7 +72,6 @@ html {
     list-style: none;
     font-size: 30px;
     position: relative;
-    /*border-right: 2px solid black;*/
     box-sizing: border-box; }
     @media (max-width: 620px) {
       .nav .nav__menu:hover {
@@ -126,20 +126,21 @@ html {
             border-top: 0;
             padding-top: 0; } }
         .nav .nav__menu .navSubmenu .nav__items .nav__button {
+          font-family: 'Oswald', sans-serif;
           color: #363636;
           position: relative;
           text-decoration: none; }
           @media (min-width: 620px) {
             .nav .nav__menu .navSubmenu .nav__items .nav__button {
-              -webkit-text-stroke: 1px #8d8d8d;
-              color: transparent; }
+              /*-webkit-text-stroke: 1px rgb(141, 141, 141);
+                            color: transparent;*/ }
               .nav .nav__menu .navSubmenu .nav__items .nav__button::before {
                 content: "";
                 position: absolute;
                 display: block;
                 width: 100%;
-                height: 10px;
-                bottom: 56px;
+                height: 6px;
+                bottom: 64px;
                 left: 0;
                 background-color: #ffbc6f;
                 opacity: 70%;
@@ -298,10 +299,10 @@ html {
     position: relative;
     overflow: hidden;
     background-color: salmon; }
-  .galeria .galeria__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
+    .galeria .galeria__contenedorFoto .galeria__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
   @media (min-width: 620px) {
     .galeria {
       height: 500px;
@@ -459,127 +460,133 @@ html {
       justify-content: center; } }
 
 /* productos */
-.principal {
-  width: 100vw;
-  height: 360px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 100px; }
-
-.principal__arriba {
-  width: 100vw;
-  height: 280px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-
-.principal__texto {
-  color: #8d8d8d;
-  font-size: 62px; }
-
-.principal__abajo {
-  width: 100vw;
-  height: 80px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 46px; }
-
-.principal__abajo__links {
-  text-decoration: none;
-  color: #8d8d8d; }
-  .principal__abajo__links:hover {
-    color: #ffbc6f;
-    transition: 0.7s; }
-
-.contenedorTitulo {
-  width: 60vw;
-  margin: 0px auto;
-  justify-content: center;
-  padding-top: 100px; }
-
-.tituloTartas {
-  width: 60vw;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  padding-top: 20px;
-  border-color: #c7c5c5;
-  border-radius: 8px;
-  border-style: ridge;
-  border-width: 2px; }
-
-.tituloTartas__texto {
-  color: #8d8d8d;
-  font-size: 90px; }
-
-#circuloTartas {
-  height: 150px;
-  width: 150px;
-  background-image: url(../assets/tarta.jpg);
-  background-size: 300px;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 270px; }
-
-#circuloBurgers {
-  height: 150px;
-  width: 150px;
-  background-image: url(../assets/burger.jpeg);
-  background-size: 200px;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 270px; }
-
-.contenedorItems {
-  width: 60vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0px auto; }
-
-.contenedorItems__col1 {
-  width: 100%; }
-
-.contenedorItems__col2 {
-  width: 100%; }
-
-.productoItem {
-  width: 60vw;
-  display: flex;
-  flex-direction: column;
-  padding-top: 50px;
-  padding-bottom: 10px;
-  margin: 0px auto; }
-
-.productoItem__titulo {
-  font-size: 42px;
-  color: #c26e00; }
-
-.productoItem__descripcion {
-  font-size: 28px;
-  color: #5e3302; }
-
-@media (min-width: 620px) {
-  .principal__texto {
-    color: #8d8d8d;
-    font-size: 84px; }
-  .tituloTartas {
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-bottom: 20px; }
-  .tituloTartas__texto {
-    font-size: 120px; }
-  .contenedorItems {
-    width: 100vw;
-    flex-direction: row; }
-  .contenedorItems__col1 {
-    width: 50%; }
-  .contenedorItems__col2 {
-    width: 50%; }
-  .productoItem {
-    width: 40vw; } }
+.containerGeneral {
+  width: 100vw; }
+  .containerGeneral .imagen_fondo {
+    background-image: url(../assets/portada-productos.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0; }
+    .containerGeneral .imagen_fondo .principal {
+      width: 100%;
+      height: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.39)); }
+      .containerGeneral .imagen_fondo .principal .principal__arriba {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .containerGeneral .imagen_fondo .principal .principal__arriba .principal__arriba__texto {
+          color: white;
+          font-size: 66px; }
+          @media (min-width: 620px) {
+            .containerGeneral .imagen_fondo .principal .principal__arriba .principal__arriba__texto {
+              font-size: 84px; } }
+      .containerGeneral .imagen_fondo .principal .principal__abajo {
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 46px; }
+        .containerGeneral .imagen_fondo .principal .principal__abajo .principal__abajo__links {
+          text-decoration: none;
+          color: white; }
+          .containerGeneral .imagen_fondo .principal .principal__abajo .principal__abajo__links:hover {
+            color: #ffbc6f;
+            transition: 0.7s; }
+  .containerGeneral .coccion {
+    width: 90vw;
+    border: 2px solid black;
+    border-radius: 6px;
+    margin: 60px auto 40px auto;
+    background-image: linear-gradient(to right, #fad99c, #ffbc6f);
+    overflow: hidden;
+    display: flex;
+    align-items: center; }
+    .containerGeneral .coccion .coccion__icono {
+      width: 30%; }
+      .containerGeneral .coccion .coccion__icono img {
+        height: 70%;
+        width: 70%; }
+        @media (min-width: 620px) {
+          .containerGeneral .coccion .coccion__icono img {
+            height: 50%;
+            width: 50%; } }
+    .containerGeneral .coccion .coccion__texto {
+      width: 70%;
+      font-size: 18px; }
+      .containerGeneral .coccion .coccion__texto p {
+        font-family: 'Oswald', sans-serif;
+        text-align: start; }
+      @media (min-width: 620px) {
+        .containerGeneral .coccion .coccion__texto {
+          font-size: 26px; } }
+    @media (min-width: 620px) {
+      .containerGeneral .coccion {
+        width: 65%; } }
+  .containerGeneral .titulo {
+    height: 320px;
+    width: 320px;
+    overflow: hidden;
+    border-radius: 160px;
+    margin: 100px auto 40px auto;
+    position: relative;
+    box-shadow: 10px 10px 5px #e9e9e9; }
+    .containerGeneral .titulo .titulo__foto {
+      object-fit: cover;
+      object-position: center; }
+    .containerGeneral .titulo .titulo__texto {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 320px;
+      width: 320px;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .containerGeneral .titulo .titulo__texto p {
+        font-size: 90px;
+        color: white; }
+  .containerGeneral .contenedorItems {
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    margin: 0px auto 40px auto;
+    font-family: 'Oswald', sans-serif; }
+    .containerGeneral .contenedorItems .contenedorItems__col {
+      width: 90%;
+      display: flex;
+      flex-direction: column; }
+      .containerGeneral .contenedorItems .contenedorItems__col .productoItem {
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        margin: 0px auto; }
+        .containerGeneral .contenedorItems .contenedorItems__col .productoItem .productoItem__titulo {
+          font-size: 1.6em;
+          color: #c26e00; }
+        .containerGeneral .contenedorItems .contenedorItems__col .productoItem .productoItem__descripcion {
+          font-size: 1.4em;
+          color: #5e3302; }
+        @media (min-width: 620px) {
+          .containerGeneral .contenedorItems .contenedorItems__col .productoItem {
+            width: 25vw; } }
+      @media (min-width: 620px) {
+        .containerGeneral .contenedorItems .contenedorItems__col {
+          flex-direction: row; } }
+    @media (min-width: 620px) {
+      .containerGeneral .contenedorItems {
+        width: 100vw;
+        flex-direction: column; } }
 
 /* cultura */
 .culturaContenedor {

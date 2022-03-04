@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Menu de comidas congeladas.">
     <title>Productos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">	
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Dongle:wght@300&family=Montserrat:wght@400;500;600&family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
     <!-- animate-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -37,32 +37,44 @@
 
     <!--PRODUCTOS-->
     <hr class="lineaSeparador animate__animated animate__slideInLeft">
-    <main class="containerGeneral fondo">
-        <div class="principal animate__animated animate__slideInUp ">
-            <div class="principal__arriba">
-                <p class="principal__texto ">MENÚ DE COMIDAS CONGELADAS</p>
-            </div>
-            
-            <div class="principal__abajo">
-                <a class="principal__abajo__links" href="#tartas">TARTAS</a>
-                <a class="principal__abajo__links" href="#burgers">BURGERS</a>
-            </div>
-            
-        </div>
-        <div class="contenedorTitulo"><a name="tartas"></a>
-            <div class="tituloTartas">
-                <div>
-                    <p class="tituloTartas__texto">TARTAS</p>
+    <main class="containerGeneral fondo" >
+        <div class="imagen_fondo">
+            <div class="principal ">
+                <div class="principal__arriba animate__animated animate__slideInUp ">
+                    <p class="principal__arriba__texto">MENÚ DE COMIDAS CONGELADAS</p>
                 </div>
-                <div id="circuloTartas">
-                    <!--imagen-->
+                
+                <div class="principal__abajo animate__animated animate__slideInUp ">
+                    <a class="principal__abajo__links" href="#tartas">TARTAS</a>
+                    <a class="principal__abajo__links" href="#burgers">BURGERS</a>
                 </div>
+                
             </div>
         </div>
+
+        <div class="coccion">
+            <div class="coccion__icono">
+                <img src="../assets/iconoFuego.png" alt="">
+            </div>
+            <div class="coccion__texto">
+                <p>Recomendamos cocinar todas nuestras comidas al horno, entre 15 y 20 minutos, hasta descongelar y dorar a gusto.</p>
+            </div>
+        </div>
+
+        <a name="tartas"></a>
+        <div class="titulo">
+            <div class="titulo__foto">
+                <img src="../assets/tarta.jpg" alt="">
+            </div>
+            <div class="titulo__texto">
+                <p>TARTAS</p>
+            </div>
+        </div>
+        
 
         <div class="contenedorItems">
 
-            <div class="contenedorItems__col1">
+            <div class="contenedorItems__col">
                 <div class="productoItem">
                     <div class="productoItem__titulo">
                         <p>Calabaza y Puerros</p>
@@ -93,7 +105,7 @@
 
 
 
-            <div class="contenedorItems__col2">
+            <div class="contenedorItems__col">
                 <div class="productoItem">
                     <div class="productoItem__titulo">
                         <p>Calabaza y Puerros</p>
@@ -124,21 +136,20 @@
 
         </div>
 
-        <div class="contenedorTitulo"><a name="burgers"></a>
-            <div class="tituloTartas">
-                <div>
-                    <p class="tituloTartas__texto">BURGERS</p>
-                </div>
-                <div id="circuloBurgers">
-                    <!--imagen-->
-                </div>
+        <a name="burgers"></a>
+        <div class="titulo">
+            <div class="titulo__foto">
+                <img src="../assets/burger.jpeg" alt="">
             </div>
+            <div class="titulo__texto">
+                <p>BURGERS</p>
+            </div>
+            
         </div>
 
         
         <div class="contenedorItems">
-
-            <div class="contenedorItems__col1">
+            <div class="contenedorItems__col">
                 <div class="productoItem">
                     <div class="productoItem__titulo">
                         <p>Trigo Sarraceno</p>
@@ -169,7 +180,7 @@
 
 
 
-            <div class="contenedorItems__col2">
+            <div class="contenedorItems__col">
                 <div class="productoItem">
                     <div class="productoItem__titulo">
                         <p>Trigo Sarraceno</p>

@@ -2,6 +2,7 @@
     padding-bottom: 40px;
 }
 
+/*foto principal y texto encima*/
 .imagen_plaza{
     background-image: url(../assets/plaza.jpg);
     background-repeat: no-repeat;
@@ -47,12 +48,8 @@
 
     @keyframes andando {
         0%{transform: translateX(-70%);}
-        
-        
-
         100%{transform: translateX(70%);};
                 }
-
     img{
         height: 100px;
         width: 100px;
@@ -62,6 +59,7 @@
         }
     }
 }
+
 .culturaCard{
 
     width: 80%;

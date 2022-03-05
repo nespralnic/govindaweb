@@ -1,0 +1,17 @@
+.footer{
+    height: 100px;
+    width: 100vw;
+    box-sizing: border-box;
+    background-color: $naranja;
+    text-align: right;
+    color: white;
+    position: sticky;
+    bottom: auto;
+    
+    
+    .footer__textBA{
+        display: inline-block;
+        line-height: 20px;
+        padding-right: 30px;
+    }
+}

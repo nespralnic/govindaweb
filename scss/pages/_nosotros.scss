@@ -1,0 +1,118 @@
+
+.nosotros_{
+    width: 100vw;
+    background-color: transparent;
+    padding-bottom: 50px;
+
+
+        .nosotros__segmento{
+            padding-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 10px;
+            
+            @media (min-width:$ancho-mobile){
+                flex-direction: row;
+            }
+
+            .nosotros__segmento__texto{
+
+                background-image: linear-gradient(to right, rgb(255, 204, 109), $naranja);
+                width: 80%;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media (min-width:$ancho-mobile){
+                    width: 60%;
+                    height: 320px;
+                    border-radius: 0px 170px 170px 0px;
+                    animation-duration: 1s;
+                    animation-name: entrada;
+            
+                    @keyframes entrada {
+                    0%{transform:translateX(-100%);}
+                    80%{transform: translateX(0);}
+                    }
+                }
+
+                p{
+                    width: 80%;
+                    font-size: 28px;
+                    font-family: 'Oswald', sans-serif;
+                    padding: 10px;
+                    @media (min-width:$ancho-mobile){
+                        text-align: start;
+                        font-size: 30px;
+                    }
+                }
+
+            }
+
+            .nosotros__segmento__foto{
+                
+                display: flex;
+                justify-content: center;
+                margin-top: 40px;
+                
+
+                @media (min-width:$ancho-mobile){
+                    width: 40%;
+                    justify-content: left;
+                    padding-left: 20px;
+                    margin-top: 0;
+                }
+
+                
+            
+
+                .nosotros__segmento__foto__circulo{
+                    height: 320px;
+                    width: 320px;
+                    border-radius: 170px;
+                    object-fit: cover;
+                    background-position: left;
+
+                    animation-duration: 1s;
+                    animation-name: respira;
+        
+                }
+
+                @keyframes respira {
+                    20%{transform: scale(1);}
+                    80%{transform: scale(1.1);} ;
+                }
+
+            }
+        }
+
+    .marco{
+
+        width: 80%;
+        margin: 40px auto 0 auto;
+        border: 2px solid $naranja;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width:$ancho-mobile){
+            width: 56%;
+        }
+
+        .marco__texto{
+            width: 95%;
+            padding: 10px;
+            
+
+            p{
+                font-family: 'Oswald', sans-serif;
+                font-size: 30px;
+
+            }
+        }
+    }
+}
+

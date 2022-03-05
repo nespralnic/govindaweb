@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alimentacion sana">
     <title>Cultura</title>
-    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">	
-    <link rel="stylesheet" href="../styles/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Dongle:wght@300&family=Montserrat:wght@400;500;600&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
     <!-- animate-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <header>
         <nav>
-            <ul class="nav" >
-                <li class="nav__items" id="navLogoMobile"> <a class="nav__button" id="nav__button--img" href="../index.html"><img src="../assets/Govinda-negativo-negro base.jpg"  height="60" alt=""></a></li></li>
-                <li id="navMenu"><p id="palabraMenu">MENU</p>
+            <ul class="nav">  
+                <li class="nav__mobile"> 
+                    <a class="nav__button--img" href="../index.html"><img src="../assets/Govinda-negativo-negro base.svg"  height="60" alt=""></a>
+                </li>
+                <li class="nav__menu">
+                    <p id="palabraMenu">MENU</p>
                     <ul class="navSubmenu">
-                        <li class="nav__items" id="navNosotros"> <a class="nav__button" href="../pages/nosotros.html">  nosotros</a></li>
-                        <li class="nav__items" id="navProductos"> <a class="nav__button" href="../pages/productos.html"> productos</a></li>
-                        <li class="nav__items" id="navLogoDesktop"> <a class="nav__button" id="nav__button--img" href="../index.html"><img src="../assets/Govinda-negativo-negro base.jpg"  height="60" alt=""></a></li>
-                        <li class="nav__items" id="navCultura"> <a class="nav__button" href="#"> cultura</a></li>
-                        <li class="nav__items" id="navContacto"> <a class="nav__button" href="../pages/contacto.html"> contacto</a></li>
+                        <li class="nav__items" > <a class="nav__button" href="../pages/nosotros.html">  nosotros</a></li>
+                        <li class="nav__items" > <a class="nav__button" href="../pages/productos.html"> productos</a></li>
+                        <li class="nav__items--pad" > <a class="nav__button--imgdesk" href="../index.html">
+                            <img src="../assets/Govinda-negativo-negro base.svg"  height="60" alt=""></a></li>
+                        <li class="nav__items" > <a class="nav__button nav__button--select" href="#"> cultura</a></li>
+                        <li class="nav__items" > <a class="nav__button" href="../pages/contacto.html"> contacto</a></li>
                     </ul>
                 </li>
             </ul>
@@ -29,72 +34,56 @@
         </nav>
     </header>
 
-    <main>
-        <div class="tituloSeccion">
-            <a name="cultura"><p class="tituloTextoSeccion animate__animated animate__slideInRight " > CULTURA</p></a>
-        </div>
+    <main class="fondo">
+        <hr class="lineaSeparador animate__animated animate__slideInLeft">
 
-        <div class="culturaContenedor">
-            <div class="area1">
-                <div class="culturaFrame">
-                    <div class="culturaFrame__encabezado" id="fotoAlimentacion">
-
-                    </div>
-                    <div class="culturaFrame__titulo">
-                        <p class="culturaFrame__titulo--texto">Alimentación Saludable</p>
-
-                    </div>
-                    <div class="culturaFrame__contenido">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nulla accusantium voluptates nam eius doloremque, numquam non dolorem in qui rerum animi exercitationem repellat molestias sapiente! Perferendis necessitatibus expedita sint.</p>
-
-                    </div>
+        <div class="imagen_plaza">
+            <div class="principal">
+                <div class="principal__arriba animate__animated animate__slideInUp ">
+                    <p class="principal__arriba__texto">ALIMENTACIÓN</p>
+                    <p class="principal__arriba__texto">Y COSTUMBRES</p>
+                    <p class="principal__arriba__texto">DE LA CIUDAD</p>
+                    
                 </div>
-            </div>
-
-            <div class="area2">
-                <div class="culturaFrame">
-                    <div class="culturaFrame__encabezado" id="fotoBici">
-
-                    </div>
-                    <div class="culturaFrame__titulo">
-                        <p class="culturaFrame__titulo--texto">Envíos en Bicicleta</p>
-
-                    </div>
-                    <div class="culturaFrame__contenido">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nulla accusantium voluptates nam eius doloremque, numquam non dolorem in qui rerum animi exercitationem repellat molestias sapiente! Perferendis necessitatibus expedita sint.</p>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="area3">
-                <div class="culturaFrame">
-                    <div class="culturaFrame__encabezado">
-
-                    </div>
-                    <div class="culturaFrame__titulo">
-
-                    </div>
-                    <div class="culturaFrame__contenido">
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="area4">
-                <div class="culturaFrame">
-                    <div class="culturaFrame__encabezado">
-
-                    </div>
-                    <div class="culturaFrame__titulo">
-
-                    </div>
-                    <div class="culturaFrame__contenido">
-
-                    </div>
-                </div>
+                
             </div>
         </div>
+        <div class="bici">
+            <img src="../assets/iconoBici3.png" alt="">
+        </div>
+        
+        <div class="culturaCard">
+            <div class="culturaCard__titulo">
+                <h3>Alimentación saludable</h3>
+            </div>
+            <div class="culturaCard__texto">
+                <p>
+                   La necesidad de alimentarse mejor es un motor de Govinda. Nuestra filosofía es ayudar a organizar tus compras, semanal o mensualmente, y así disponer siempre con opciones para salir del paso y comer algo rico y liviano.
+                </p>
+            </div>
+        </div>
+        <div class="culturaCard">
+            <div class="culturaCard__titulo">
+                <h3>Envíos en bici</h3>
+            </div>
+            <div class="culturaCard__texto">
+                <p>
+                   El delivery de comidas está incluido en el precio final. Hacemos envíos en toda la capital. Llevamos nuestros productos en bici nosotros mismos, así conocemos a nuestros clientes, y lo mejor es siempre... volver a encontrarnos.
+                </p>
+            </div>
+        </div>
+        <div class="culturaCard">
+            <div class="culturaCard__titulo">
+                <h3>Materia Prima</h3>
+            </div>
+            <div class="culturaCard__texto">
+                <p>
+                   Govinda Comidas es una pequeña empresa familiar, nuestro compromiso con la calidad de los productos es conocer a nuestros proovedores. Todas nuestras legumbres y harinas provienen de productores especializados y la verdura de comercios de confianza. 
+                </p>
+            </div>
+        </div>
+
+
     </main>
     <footer class="footer">
         <p class="footer__textBA"> 2022 | Buenos Aires</p>

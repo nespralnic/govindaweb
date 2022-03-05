@@ -1,0 +1,27 @@
+/* abstracts */
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+/* base */
+@import "./base/reset";
+@import "./base/globales";
+
+/* layouts */
+@import "./layout/nav";
+@import "./layout/footer";
+
+/* PAGES */
+/* home */
+@import "./pages/index/portada";
+@import "./pages/index/cards";
+@import "./pages/index/galeria";
+/* nosotros */
+@import "./pages/nosotros";
+/* contacto */
+@import "./pages/contacto";
+/* productos */
+@import "./pages/productos";
+/* cultura */
+@import "./pages/cultura";
+
+/* footer */

@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="vegano, vegetariano">
+    <meta name="description" content="Comida casera vegana y vegetariana en Buenos Aires">
     <title>Govinda Comidas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">	
-    <link rel="stylesheet" href="styles/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Dongle:wght@300&family=Montserrat:wght@400;500;600&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/estilos.css">
     <!-- animate-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
 </head>
 <body>
     <header>
         <nav>
             <ul class="nav" >
-                <li class="nav__items" id="navLogoMobile"> <a class="nav__button--img" href="#"><img src="assets/Govinda-negativo-negro base.svg"  height="60" alt=""></a></li></li>
-                <li id="navMenu"><p id="palabraMenu">MENU</p>
+                <li class="nav__mobile"> 
+                    <a class="nav__button--img" href="#"><img src="assets/Govinda-negativo-negro base.svg"  height="60" alt=""></a>
+                </li>
+                <li class="nav__menu">
+                    <p id="palabraMenu">MENU</p>
                     <ul class="navSubmenu">
-                        <li class="nav__items" id="navNosotros"> <a class="nav__button" href="pages/nosotros.html">  nosotros</a></li>
-                        <li class="nav__items" id="navProductos"> <a class="nav__button" href="pages/productos.html"> productos</a></li>
-                        <li class="nav__items" id="navLogoDesktop"> <a class="nav__button--img" href="#"><img src="assets/Govinda-negativo-negro base.svg"  height="60" alt=""></a></li>
-                        <li class="nav__items" id="navCultura"> <a class="nav__button" href="pages/cultura.html"> cultura</a></li>
-                        <li class="nav__items" id="navContacto"> <a class="nav__button" href="pages/contacto.html"> contacto</a></li>
+                        <li class="nav__items" > <a class="nav__button" href="./pages/nosotros.html">  nosotros</a></li>
+                        <li class="nav__items" > <a class="nav__button" href="./pages/productos.html"> productos</a></li>
+                        <li class="nav__items--pad" > <a class="nav__button--imgdesk" href="#">
+                            <img src="assets/Govinda-negativo-negro base.svg"  height="60" alt=""></a></li>
+                        <li class="nav__items" > <a class="nav__button" href="./pages/cultura.html"> cultura</a></li>
+                        <li class="nav__items" > <a class="nav__button" href="./pages/contacto.html"> contacto</a></li>
                     </ul>
                 </li>
             </ul>
@@ -29,9 +37,10 @@
         </nav>
     </header>
 
+
     <main>
          <!-- PORTADA-->
-         <div class="portada_imagen">
+         <section class="portada_imagen">
             <div class="portada animate__animated animate__slideInUp ">
                 <p  id="portada__textGovinda">GOViNDA</p>
                 <p  id="portada__textVeggie">VEGGIE | VEGAN</p>
@@ -39,46 +48,49 @@
                 <p  id="portada__textCongelado">CONGELADO Y LISTO PARA COCINAR</p>
                 <p class="contenedorButton"><a id="portada__button" href="pages/productos.html">INGRESAR</a></p>
             </div>
-         </div>
+        </section>
          
-
-        <!-- PORTADA2
-        <div class="portada2">
-            <div class="portada2__contenedorIzquierda">
-                
-            </div>
-
-            <div class="portada2__contenedorDerecha">
-                <div class="portada2__contenedorDerecha--base1">
-
-                </div>
-                <div class="portada2__contenedorDerecha--base2">
-
-                </div>
-                <div class="portada2__contenedorDerecha--texto">
-                    <p>Govinda Comidas</p>
-                    <p>Sabores caseros.</p>
-                    <p>Recetas hechas</p> 
-                    <p>en casa.</p>  
-                </div>
-            </div>
-        </div>-->
-        <div class="seccionIconos">
-            <div class="seccionIconos__card">
+        <section class="seccionIconos fondo">
+            <div class="seccionIconos__card" 
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="500"
+            data-aos-once="true"
+            >
                 <img class="seccionIconos__card__img" src="assets/champis.svg" alt="">
                 <p class="seccionIconos__card__p">Vegan</p>
             </div>
-            <div class="seccionIconos__card">
+            <div class="seccionIconos__card"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="700"
+            data-aos-once="true">
                 <img class="seccionIconos__card__img" src="assets/queso.svg" alt="">
                 <p class="seccionIconos__card__p">Vegetariano</p>
             </div>
-            <div class="seccionIconos__card">
+            <div class="seccionIconos__card" 
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="950"
+            data-aos-once="true">
                 <img class="seccionIconos__card__img" src="assets/glutenfree.svg" alt="">
                 <p class="seccionIconos__card__p">Sin TACC</p>
             </div>
-        </div>
+        </section>
+        <section class="galeria">
+            <div class="galeria__contenedorFoto"><img src="assets/galeria/burgerPlato.jpg" alt="" class="galeria__img"></div>
+            <div class="galeria__contenedorFoto"><img src="assets/galeria/nuggetsMano.jpeg" alt="" class="galeria__img"></div>
+            <div class="galeria__contenedorFoto"><img src="assets/galeria/pastaBobina.jpeg" alt="" class="galeria__img"></div>
+            <div class="galeria__contenedorFoto"><img src="assets/galeria/platoBurgerHpn.jpeg" alt="" class="galeria__img"></div>
+            <div class="galeria__contenedorFoto"><img src="assets/galeria/tartaBobina.jpeg" alt="" class="galeria__img"></div>
+            <div class="galeria__contenedorFoto"><img src="assets/galeria/platoFalafel.jpeg" alt="" class="galeria__img"></div>
+        </section>
     </main>
     <footer class="footer">
         <p class="footer__textBA"> 2022 | Buenos Aires</p>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>

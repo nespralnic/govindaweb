@@ -1,0 +1,212 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Contrail+One&family=Dongle:wght@300&family=Montserrat:wght@400;500;600&family=Oswald:wght@300&display=swap");
+
+    
+.containerGeneral{
+    width: 100vw;
+    .imagen_fondo{
+        background-image: url(../assets/portada-productos.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:cover;
+        background-attachment: fixed;
+        margin: 0;
+
+        .principal{
+            width: 100%;
+            height: 480px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            font-family: 'Contrail One', cursive;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.76),rgba(0, 0, 0, 0.39)); 
+        
+            .principal__arriba{
+                width: 100vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            
+                .principal__arriba__texto{
+                    color: rgb(255, 255, 255);
+                    font-size: 66px;
+
+                    @media (min-width:$ancho-mobile){
+
+                        font-size: 84px;
+                    }
+                }
+            }
+
+            .principal__abajo{
+                width: 100vw;
+                
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                font-size: 46px;
+                
+                .principal__abajo__links{
+                    text-decoration: none;
+                    color:rgb(255, 255, 255);
+                    &:hover{
+                        color: $naranja;
+                        transition: 0.7s;
+                    }
+                }  
+            }
+            
+            
+            
+            
+        }
+    }    
+    
+    .coccion{
+        
+        width: 90vw;
+        border: 2px solid black;
+        border-radius: 6px;
+        margin: 60px auto 40px auto;
+        background-image: linear-gradient(to right,rgb(250, 217, 156),$naranja);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    
+        .coccion__icono{
+            width: 30%;
+            img{
+                height:70%;
+                width: 70%;
+
+                @media (min-width:$ancho-mobile) {
+                    height:50%;
+                    width: 50%;
+                } 
+            }
+            
+
+        }
+
+        .coccion__texto{
+            width: 70%;
+            font-size: 18px;
+            
+            
+            p{
+                font-family: 'Oswald', sans-serif;
+                text-align:start;
+            }
+            @media (min-width:$ancho-mobile){
+                font-size: 26px;
+            }
+        
+        }
+
+        @media (min-width:$ancho-mobile){
+            width: 65%;
+        }
+    }
+
+
+    .titulo{
+        
+        height: 320px;
+        width: 320px;
+        overflow: hidden;
+        border-radius: 160px;
+        margin: 100px auto 40px auto;
+        position: relative;
+        box-shadow: 10px 10px 5px rgb(233, 233, 233);
+
+
+        .titulo__foto{
+            object-fit: cover;
+            object-position: center;
+            
+        }
+
+        .titulo__texto{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 320px;
+            width: 320px;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Contrail One', cursive;
+
+            p{
+                font-size: 90px;
+                color: rgb(255, 255, 255);
+                
+                
+            }    
+        }
+    }
+
+    .contenedorItems{
+        width: 90vw;
+        display: flex;
+        align-items: center;
+        margin: 0px auto 40px auto;
+        font-family: 'Oswald', sans-serif;    
+    
+    
+
+        .contenedorItems__col{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            
+            .productoItem{
+                
+                display: flex;
+                flex-direction: column;
+                padding-top: 50px;
+                padding-bottom: 10px;
+                margin: 0px auto;
+                
+
+                .productoItem__titulo{
+                    font-size: 1.6em;
+                    color: rgb(194, 110, 0);
+                    font-family: 'Contrail One', cursive;
+                                  
+                    
+                }
+
+                .productoItem__descripcion{
+                    font-size: 1.4em;
+                    color: rgb(94, 51, 2);
+                    
+                }
+                
+                @media (min-width:$ancho-mobile){
+                    width: 25vw;
+                }
+            }
+            @media (min-width:$ancho-mobile){
+                
+                flex-direction: row;
+            }
+      
+        }
+        @media (min-width:$ancho-mobile){
+            width:100vw;
+            flex-direction: column;
+               
+        }
+
+    }
+    
+}
+
+
+
+
+

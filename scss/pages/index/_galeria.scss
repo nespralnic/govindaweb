@@ -1,0 +1,31 @@
+.galeria{
+    height: 250px;
+    display: flex;
+    width: 100vw;
+    padding-top: 20px;
+    background-color: $naranja;
+
+    .galeria__contenedorFoto{
+        height:100%;
+        width:  17vw;
+        position: relative;
+        overflow: hidden;
+        background-color: salmon;
+        
+        .galeria__img{
+        
+        
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        
+            
+        }
+    }
+    
+    @media (min-width:$ancho-mobile){
+        height: 500px;
+        padding-top: 30px;
+    }
+    
+}

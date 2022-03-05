@@ -1,0 +1,31 @@
+.fondo{
+    @include mixFondo($fotoEmpapelado,none);
+    padding-bottom: 40px;
+}
+
+.fondoContacto{
+    @include mixFondo(none,$naranja);
+}    
+
+.tituloSeccion{
+    width: 100vw;
+    background-color: $naranja;
+
+}
+
+.tituloTextoSeccion{
+    font-family: 'Contrail One', cursive;
+    -webkit-text-stroke: 1px rgb(141, 141, 141);
+    color: transparent;
+    font-size: 60px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.lineaSeparador{
+    border:0;
+    height: 5px;
+    background-color: rgba(179, 179, 179,0.3);
+}

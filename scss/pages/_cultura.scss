@@ -1,0 +1,108 @@
+
+.imagen_plaza{
+    background-image: url(../assets/plaza.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+    margin: 0;
+
+    .principal{
+        background-image: linear-gradient(rgba(71, 62, 62, 0.76),rgba(0, 0, 0, 0.39)); 
+
+        .principal__arriba{
+            width: 100%;
+            height: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Contrail One', cursive;
+            
+    
+            .principal__arriba__texto{
+
+                font-size: 52px;
+                color: rgb(255, 255, 255);
+                @media (min-width:$ancho-mobile){
+                    font-size: 66px;
+                }
+                
+            }
+        }
+    }
+
+}
+.bici{
+    padding-top: 40px;
+    animation: 4s infinite;
+    animation-name: andando;
+        
+                
+
+    @keyframes andando {
+        0%{transform: translateX(-70%);}
+        
+        
+
+        100%{transform: translateX(70%);};
+                }
+
+    img{
+        height: 100px;
+        width: 100px;
+        @media (min-width:$ancho-mobile){
+            height: 150px;
+            width: 150px;
+        }
+    }
+}
+.culturaCard{
+
+    width: 80%;
+    margin: 40px auto 0 auto;
+    border: 2px solid $naranja;
+    border-radius: 5px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+
+
+    @media (min-width:$ancho-mobile){
+        width: 56%;
+    }
+
+    .culturaCard__titulo{
+        width: 95%;
+        padding: 10px;
+        padding-left: 20px;
+        
+        h3{
+            text-align: start;
+            font-family: 'Contrail One', cursive;
+            font-size: 33px;
+        }
+    }
+
+    .culturaCard__texto{
+        width: 95%;
+        padding: 10px;
+        padding-left: 20px;
+        
+        
+
+        p{
+            text-align: start;
+            font-family: 'Oswald', sans-serif;
+            font-size: 30px;
+
+        }
+    }
+}
+
+
+
+
+
+

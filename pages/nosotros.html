@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quienes somos.">
     <title>Nosotros</title>
-    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">	
-    <link rel="stylesheet" href="../styles/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Dongle:wght@300&family=Montserrat:wght@400;500;600&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
     <!-- animate-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <header>
         <nav>
-            <ul class="nav" >
-                <li class="nav__items" id="navLogoMobile"> <a class="nav__button--img" href="../index.html"><img src="../assets/Govinda-negativo-negro base.svg"  height="60" alt=""></a></li></li>
-                <li id="navMenu"><p id="palabraMenu">MENU</p>
+            <ul class="nav">
+                <li class="nav__mobile"> 
+                    <a class="nav__button--img" href="../index.html"><img src="../assets/Govinda-negativo-negro base.svg"  height="60" alt=""></a>
+                </li>
+                <li class="nav__menu">
+                    <p id="palabraMenu">MENU</p>
                     <ul class="navSubmenu">
-                        <li class="nav__items" id="navNosotros"> <a class="nav__button" href="#">  nosotros</a></li>
-                        <li class="nav__items" id="navProductos"> <a class="nav__button" href="../pages/productos.html"> productos</a></li>
-                        <li class="nav__items" id="navLogoDesktop"> <a class="nav__button--img" href="../index.html"><img src="../assets/Govinda-negativo-negro base.svg"  height="60" alt=""></a></li>
-                        <li class="nav__items" id="navCultura"> <a class="nav__button" href="../pages/cultura.html"> cultura</a></li>
-                        <li class="nav__items" id="navContacto"> <a class="nav__button" href="../pages/contacto.html"> contacto</a></li>
+                        <li class="nav__items" > <a class="nav__button nav__button--select" href="#">  nosotros</a></li>
+                        <li class="nav__items" > <a class="nav__button " href="../pages/productos.html"> productos</a></li>
+                        <li class="nav__items--pad" > <a class="nav__button--imgdesk" href="../index.html">
+                            <img src="../assets/Govinda-negativo-negro base.svg"  height="60" alt=""></a></li>
+                        <li class="nav__items" > <a class="nav__button" href="../pages/cultura.html"> cultura</a></li>
+                        <li class="nav__items" > <a class="nav__button" href="../pages/contacto.html"> contacto</a></li>
                     </ul>
                 </li>
             </ul>
@@ -31,38 +36,31 @@
 
 
     <main>
+        <!--
         <div class="tituloSeccion">
-            <p class="tituloTextoSeccion animate__animated animate__slideInRight " > NOSOTROS</p></a>
+            <p class="tituloTextoSeccion animate__animated animate__slideInRight " > NOSOTROS</p>
         </div>
+         -->
+         <hr class="lineaSeparador animate__animated animate__slideInLeft">
 
-        <div class="nosotros1">
-            <div class="nosotros1__left">
-                <p class="nosotros1Texto">Somos un desprendimiento de las consecuencias económicas de la pandemia.</p>
-                <p class="nosotros1Texto">Asímismo somos un emprendimiento para canalizar nuestra energía creativa y proyectarla en la comunidad.</p>
-            </div>
-            <div class="nosotros1__right">
-                <div id="circulo">
-
+         <section class="nosotros_ fondo">
+            <div class="nosotros__segmento">
+                <div class="nosotros__segmento__texto">
+                    <p class="nosotros__texto__p">Govinda es un proyecto nacido entre las consecuencias económicas de la pandemia. La necesidad tomó forma de emprendimiento para canalizar nuestra energía creativa y proyectarla en la comunidad.</p>
                 </div>
-
-            </div>
-        </div>
-
-        <div class="nosotros2">
-            <div class="nosotros1__right"> <!-- como el anterior inverso-->
-                <div id="circulo2">
-
+                <div class="nosotros__segmento__foto">
+                    <img class="nosotros__segmento__foto__circulo" src="../assets/chicosCocinando.jpg" alt="">
                 </div>
-
             </div>
-            <div class="nosotros1__left"> <!-- como el anterior inverso-->
-                <p class="nosotros2Texto">Somos marplatenses y porteños, músicos y terapistas, 
-                    antropólogos e ingenieros, un poco de cada cosa y... a procesar. Gente 
-                    especial y simple, como todos los que queremos. Aunque nosotros... 
-                    como cada día de nuestra vida, cocineros.</p> 
+            <div class="marco">
+                <div class="marco__texto">
+                    <p>
+                       Govinda Comidas es para nosotros transmitir las recetas y las costumbres de casa a la casa de otros, es cocinar con alegría y sencillez, primero para los amigos y luego para los amigos que se van sumando. 
+                    </p>
+                </div>
             </div>
-            
-        </div>   
+         </section>
+        
     </main>
 
     <footer class="footer">

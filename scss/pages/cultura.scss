@@ -1,0 +1,199 @@
+
+.imagen_plaza{
+    background-image: url(../assets/plaza.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+    margin: 0;
+
+    .principal{
+        background-image: linear-gradient(rgba(71, 62, 62, 0.76),rgba(0, 0, 0, 0.39)); 
+
+        .principal__arriba{
+            width: 100%;
+            height: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Contrail One', cursive;
+            
+    
+            .principal__arriba__texto{
+
+                font-size: 52px;
+                color: rgb(255, 255, 255);
+                @media (min-width:$ancho-mobile){
+                    font-size: 66px;
+                }
+                
+            }
+        }
+    }
+
+}
+.bici{
+    padding-top: 40px;
+    animation: 4s infinite;
+    animation-name: andando;
+        
+                
+
+    @keyframes andando {
+        0%{transform: translateX(-70%);}
+        
+        
+
+        100%{transform: translateX(70%);};
+                }
+
+    img{
+        height: 100px;
+        width: 100px;
+        @media (min-width:$ancho-mobile){
+            height: 150px;
+            width: 150px;
+        }
+    }
+}
+.culturaCard{
+
+    width: 80%;
+    margin: 40px auto 0 auto;
+    border: 2px solid $naranja;
+    border-radius: 5px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+
+
+    @media (min-width:$ancho-mobile){
+        width: 56%;
+    }
+
+    .culturaCard__titulo{
+        width: 95%;
+        padding: 10px;
+        padding-left: 20px;
+        
+        h3{
+            text-align: start;
+            font-family: 'Contrail One', cursive;
+            font-size: 33px;
+        }
+    }
+
+    .culturaCard__texto{
+        width: 95%;
+        padding: 10px;
+        padding-left: 20px;
+        
+        
+
+        p{
+            text-align: start;
+            font-family: 'Oswald', sans-serif;
+            font-size: 30px;
+
+        }
+    }
+}
+
+
+
+
+
+
+
+.culturaContenedor{
+    width: 100vw;   
+    margin: auto; 
+    display: grid;
+    grid-template-areas: 
+    "area1"
+    "area2"
+    "area3"
+    "area4";
+    flex-direction: column;
+    padding-bottom: 100px;
+    justify-items: center;
+}
+
+.culturaFrame{
+    width: 440px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.culturaFrame__encabezado{
+    width: 440px;
+    height: 100px;
+    background-color: crimson;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.culturaFrame__titulo{
+    width: 440px;
+    height: 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.culturaFrame__titulo--texto{
+    font-size: 36px;
+    -webkit-text-stroke: 1px rgb(141, 141, 141);
+    color: transparent;
+}
+
+.culturaFrame__contenido{
+    width: 440px;
+    height: 250px;
+    background-color: rgb(141, 141, 141);
+    opacity: 30%;
+    border-radius:  0px 0px 20px 20px;
+}
+
+.area1{
+    grid-area: "area1";
+}
+.area2{
+    grid-area: "area2";
+}
+.area3{
+    grid-area: "area3";
+}
+.area4{
+    grid-area: "area4";
+}
+
+#fotoAlimentacion{
+    background-image: url(../assets/alimentacion.jpg);
+    background-size: 440px;
+    background-position:center;
+
+}
+
+#fotoBici{
+    background-image: url(../assets/bici.jpg);
+    background-size: 800px;
+    background-position:center;
+
+}
+
+@media (min-width:$ancho-mobile ){
+    .culturaContenedor{
+        display: grid;
+        grid-template-areas: 
+        "area area2"
+        "area3 area4";
+        padding-bottom: 100px;
+        justify-items: center;
+    }
+
+}

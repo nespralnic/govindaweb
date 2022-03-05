@@ -1,5 +1,6 @@
 .fondo{
     @include mixFondo($fotoEmpapelado,none);
+    padding-bottom: 40px;
 }
 
 .fondoContacto{

@@ -1,6 +1,14 @@
+html{
+    width:100vw;
+}
+body{
+    width:100vw;
+}
+
 .fondo{
     @include mixFondo($fotoEmpapelado,none);
-    padding-bottom: 40px;
+    
+    
 }
 
 .fondoContacto{
@@ -28,4 +36,15 @@ html {
     border:0;
     height: 5px;
     background-color: rgba(179, 179, 179,0.3);
+    width:100vw;
+}
+
+.footerLink{
+    text-decoration: none;
+    color: inherit;
+
+    &:hover{
+        color:black;
+        
+    }
 }

@@ -1,3 +1,6 @@
+.mainPad{
+    padding-bottom: 40px;
+}
 
 .imagen_plaza{
     background-image: url(../assets/plaza.jpg);
@@ -34,9 +37,11 @@
 
 }
 .bici{
+    width: 100vw;
     padding-top: 40px;
     animation: 4s infinite;
     animation-name: andando;
+    overflow-x: hidden;
         
                 
 

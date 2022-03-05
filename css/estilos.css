@@ -10,16 +10,23 @@
   text-align: center;
   box-sizing: border-box; }
 
+html {
+  width: 100vw; }
+
+body {
+  width: 100vw; }
+
 .fondo {
   background-color: none;
   background-image: url(../assets/fondo-pattern-color2.jpg);
   background-repeat: repeat;
-  padding-bottom: 40px; }
+  width: 100vw; }
 
 .fondoContacto {
   background-color: #ffbc6f;
   background-image: none;
-  background-repeat: repeat; }
+  background-repeat: repeat;
+  width: 100vw; }
 
 .tituloSeccion {
   width: 100vw;
@@ -37,7 +44,14 @@ html {
 .lineaSeparador {
   border: 0;
   height: 5px;
-  background-color: rgba(179, 179, 179, 0.3); }
+  background-color: rgba(179, 179, 179, 0.3);
+  width: 100vw; }
+
+.footerLink {
+  text-decoration: none;
+  color: inherit; }
+  .footerLink:hover {
+    color: black; }
 
 /* layouts */
 .nav {
@@ -179,18 +193,80 @@ html {
           display: none; } }
 
 .footer {
-  height: 100px;
   width: 100vw;
   box-sizing: border-box;
   background-color: #ffbc6f;
+  font-family: 'Oswald', sans-serif;
+  padding-top: 60px;
+  padding-bottom: 10px;
   text-align: right;
-  color: white;
+  color: #616161;
   position: sticky;
   bottom: auto; }
-  .footer .footer__textBA {
-    display: inline-block;
-    line-height: 20px;
-    padding-right: 30px; }
+  .footer .footerMain {
+    display: flex;
+    flex-direction: column; }
+    @media (min-width: 680px) {
+      .footer .footerMain {
+        flex-direction: row;
+        justify-content: space-between; } }
+    .footer .footerMain .institucional {
+      width: 50vw;
+      display: flex;
+      justify-content: left; }
+      @media (min-width: 680px) {
+        .footer .footerMain .institucional {
+          width: 18%; } }
+      .footer .footerMain .institucional img {
+        opacity: 40%;
+        height: 50px;
+        width: 50px;
+        padding: 0 5px 0 12px; }
+      .footer .footerMain .institucional p {
+        padding-left: 5px;
+        text-align: start;
+        font-size: 19px;
+        border-left: 1px solid rgba(233, 157, 71, 0.623); }
+    .footer .footerMain .contenedorColumnas {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 20px 20px 49px; }
+      @media (min-width: 680px) {
+        .footer .footerMain .contenedorColumnas {
+          width: 40%;
+          padding: 0 20px 0 49px; } }
+      .footer .footerMain .contenedorColumnas .columna {
+        border-left: 1px solid rgba(233, 157, 71, 0.623);
+        display: flex;
+        width: 33%;
+        flex-direction: column;
+        margin: 0 auto; }
+        .footer .footerMain .contenedorColumnas .columna .columna__titulo {
+          font-size: 18px;
+          color: black;
+          text-align: start;
+          padding-left: 10px;
+          padding-bottom: 5px; }
+        .footer .footerMain .contenedorColumnas .columna .columna__texto {
+          font-size: 14px;
+          text-align: start;
+          padding-left: 10px; }
+          .footer .footerMain .contenedorColumnas .columna .columna__texto img {
+            margin-top: 5px;
+            height: 22px;
+            width: 22px;
+            opacity: 40%; }
+  .footer .footerBottom {
+    margin: 0 auto;
+    width: 85vw;
+    /*border-top: 1px solid rgba(233, 157, 71, 0.623);*/
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 30px 10px 49px; }
+    .footer .footerBottom .footerBottom__texto {
+      font-size: 16px;
+      color: rgba(233, 157, 71, 0.822); }
 
 /* PAGES */
 /* home */
@@ -405,7 +481,8 @@ html {
   display: flex;
   flex-direction: column-reverse;
   padding-top: 30px;
-  padding-bottom: 120px; }
+  padding-bottom: 120px;
+  width: 100vw; }
   .contacto .contacto__left {
     justify-content: center;
     padding-top: 40px; }
@@ -564,9 +641,13 @@ html {
     @media (min-width: 680px) {
       .containerGeneral .contenedorItems {
         width: 100vw;
-        flex-direction: column; } }
+        flex-direction: column;
+        margin-bottom: 0; } }
 
 /* cultura */
+.mainPad {
+  padding-bottom: 40px; }
+
 .imagen_plaza {
   background-image: url(../assets/plaza.jpg);
   background-repeat: no-repeat;
@@ -592,9 +673,11 @@ html {
             font-size: 66px; } }
 
 .bici {
+  width: 100vw;
   padding-top: 40px;
   animation: 4s infinite;
-  animation-name: andando; }
+  animation-name: andando;
+  overflow-x: hidden; }
 
 @keyframes andando {
   0% {

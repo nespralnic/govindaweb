@@ -1,7 +1,8 @@
 .fondoPag{
-    background-image: linear-gradient(to right, $naranja, rgba(90, 67, 25, 0.301));
+    background-image: linear-gradient(rgb(250, 204, 119),$naranja);
 }
 
+/*contenedor general*/
 .contacto{
     display: flex;
     flex-direction: column-reverse;
@@ -16,12 +17,87 @@
         padding-top: 40px;
         
         
-        #formulario{
+        .formulario{
+            
+            margin:0 auto;
+            border-radius: 8px;
+            width: 300px;
+            height: 400px;
             display: flex;
             flex-direction: column;
-            font-family: 'Contrail One', cursive;
+            justify-content:space-around;
+            align-items: center;
             
+            
+            
+            .inputsForm{
+                width: 100%;
+                background-image: linear-gradient(to right,rgb(199, 195, 195),rgb(175, 174, 174));
+                border: 0;
+                padding: 10px 10px;
+                margin-bottom: 4px;
+                font-family: 'Oswald', sans-serif;
+                font-size: 20px;
+                text-align: left;
+                
+
+                &:focus{
+                    background-image: none;
+                    background-color: rgb(199, 195, 195);
+                    outline: 0;
+                }
+            }
+
+            .inputsForm--radio{
+                border-radius: 0 10px 0 0;
+            }
+            
+            .textareaForm{
+
+                width: 100%;
+                height: 100px;
+                background-image: linear-gradient(to right,rgb(199, 195, 195),rgb(175, 174, 174));  
+                border:0;
+                
+                padding: 10px 10px;
+                font-size: 20px;
+                text-align: left;
+                font-family: 'Oswald', sans-serif;
+
+                &:focus{
+                    background-image: none;
+                    background-color: rgb(199, 195, 195);
+                    outline: 0;
+                }
+            }
+
+            
+            
+            .botonesFicha{
+                width: 100%;
+                height: 50px;
+                background-image: linear-gradient(to right,rgb(199, 195, 195),rgb(175, 174, 174));
+                background-color: none;
+                color: rgb(92, 92, 92);
+                border-radius: 4px;
+                border:0;
+                font-family: 'Contrail One', cursive;
+                font-size: 20px;
+            }
+            
+            .botonesFicha:hover{
+                background-image: linear-gradient(to right,rgb(199, 195, 195),rgb(199, 195, 195));
+                cursor: pointer;
+            }      
+            
+            @media (min-width:$ancho-mobile){
+
+                width: 400px;
+            }
         }
+
+
+
         @media (min-width:$ancho-mobile){
             width: 50%; 
         }
@@ -35,18 +111,30 @@
         justify-content: center;
         font-family: 'Contrail One', cursive;
         
+        
 
         .contacto__right--texto{
             font-size: 40px;
             width: 80%;
-            margin: 20px auto;
+            margin: 20px auto;  
+            color:rgb(99,99,99);
+
+            
+            animation-fill-mode: backwards;
+            animation-duration: 2s;
+            animation-name: colorear;
+                    
+            @keyframes colorear {
+                from{color: transparent;}
+                to{color:rgb(99,99,99);} 
+            }
         }
         @media (min-width:$ancho-mobile){
             width: 50%; 
         }
     }
 
-    @media (min-width:620px){
+    @media (min-width:$ancho-mobile){
             flex-direction: row;
             justify-content: center;
     }

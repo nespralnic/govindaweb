@@ -36,33 +36,27 @@
 
     <main>
         <hr class="lineaSeparador animate__animated animate__slideInLeft fondoPag">
-        <div class="contacto fondoContacto">
+        <div class="contacto fondoPag">
             <div class="contacto__left">
                 
 
-                    <form id="formulario" action=""> 
-                        <div>
-                            <p><label for="nombre" >Nombre</label></p>
-                            <p> <input type="text" size="46"></p>
-                            <p><label for="apellido">Apellido</label></p>
-                            <p><input type="text" size="46"></p>
-                            <p><label for="mail" >eMail</label></p>
-                            <p><input type="text" size="46"></p>
-                        </div>
-                        <br>    
-                        <div>
-                            <textarea name="contenido" id="contenido" cols="46" rows="10" placeholder="ingrese un comentario"></textarea>
-                        </div>
-                        <div>
-                            <input type="submit" value="Enviar">
-                            <input type="reset" value="Reset">
-                        </div>
+                    <form class="formulario" action=""> 
+                        <div class="formulario__contenedor">
+                            <input class="inputsForm inputsForm--radio"  type="text" id="nombre" placeholder="nombre" required>
+                            <input class="inputsForm"  type="text"  id="telefono" placeholder="mail o teléfono" required>
+                            <textarea class="textareaForm" id="textarea" placeholder="mensaje" required></textarea>
+                            <button class="botonesFicha" type="submit" value="Enviar">ENVIAR</button>
+                        </div>   
+                        
+                            
+                            
+                        
                     </form>
                 
             
             </div>
             <div class="contacto__right">
-                <p class="contacto__right--texto">MANDANOS TU MENSAJE EXPERIENCIA O CONSULTA POR PEDIDOS ESPECIALES</p>
+                <p class="contacto__right--texto">MANDANOS TU MENSAJE, EXPERIENCIA O CONSULTA POR PEDIDOS ESPECIALES</p>
 
             </div>
         </div>

@@ -7,15 +7,14 @@
   text-align: center;
   box-sizing: border-box; }
 
+main {
+  padding: 0;
+  margin: 0;
+  width: 90vw; }
+
 /*FUENTES*/
 /*font-family: 'Contrail One', cursive;*/
 /*font-family: 'Oswald', sans-serif;*/
-html {
-  width: 100vw; }
-
-body {
-  width: 100vw; }
-
 .fondo {
   background-color: none;
   background-image: url(../assets/fondo-pattern-color2.jpg);
@@ -27,16 +26,6 @@ body {
   background-image: none;
   background-repeat: repeat;
   width: 100vw; }
-
-.tituloSeccion {
-  width: 100vw;
-  background-color: #ffbc6f; }
-
-.tituloTextoSeccion {
-  font-family: 'Contrail One', cursive;
-  -webkit-text-stroke: 1px #8d8d8d;
-  color: transparent;
-  font-size: 60px; }
 
 html {
   scroll-behavior: smooth; }
@@ -478,8 +467,9 @@ html {
 
 /* contacto */
 .fondoPag {
-  background-image: linear-gradient(to right, #ffbc6f, rgba(90, 67, 25, 0.301)); }
+  background-image: linear-gradient(#facc77, #ffbc6f); }
 
+/*contenedor general*/
 .contacto {
   display: flex;
   flex-direction: column-reverse;
@@ -489,10 +479,59 @@ html {
   .contacto .contacto__left {
     justify-content: center;
     padding-top: 40px; }
-    .contacto .contacto__left #formulario {
+    .contacto .contacto__left .formulario {
+      margin: 0 auto;
+      border-radius: 8px;
+      width: 300px;
+      height: 400px;
       display: flex;
       flex-direction: column;
-      font-family: 'Contrail One', cursive; }
+      justify-content: space-around;
+      align-items: center; }
+      .contacto .contacto__left .formulario .inputsForm {
+        width: 100%;
+        background-image: linear-gradient(to right, #c7c3c3, #afaeae);
+        border: 0;
+        padding: 10px 10px;
+        margin-bottom: 4px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 20px;
+        text-align: left; }
+        .contacto .contacto__left .formulario .inputsForm:focus {
+          background-image: none;
+          background-color: #c7c3c3;
+          outline: 0; }
+      .contacto .contacto__left .formulario .inputsForm--radio {
+        border-radius: 0 10px 0 0; }
+      .contacto .contacto__left .formulario .textareaForm {
+        width: 100%;
+        height: 100px;
+        background-image: linear-gradient(to right, #c7c3c3, #afaeae);
+        border: 0;
+        padding: 10px 10px;
+        font-size: 20px;
+        text-align: left;
+        font-family: 'Oswald', sans-serif; }
+        .contacto .contacto__left .formulario .textareaForm:focus {
+          background-image: none;
+          background-color: #c7c3c3;
+          outline: 0; }
+      .contacto .contacto__left .formulario .botonesFicha {
+        width: 100%;
+        height: 50px;
+        background-image: linear-gradient(to right, #c7c3c3, #afaeae);
+        background-color: none;
+        color: #5c5c5c;
+        border-radius: 4px;
+        border: 0;
+        font-family: 'Contrail One', cursive;
+        font-size: 20px; }
+      .contacto .contacto__left .formulario .botonesFicha:hover {
+        background-image: linear-gradient(to right, #c7c3c3, #c7c3c3);
+        cursor: pointer; }
+      @media (min-width: 680px) {
+        .contacto .contacto__left .formulario {
+          width: 400px; } }
     @media (min-width: 680px) {
       .contacto .contacto__left {
         width: 50%; } }
@@ -505,11 +544,21 @@ html {
     .contacto .contacto__right .contacto__right--texto {
       font-size: 40px;
       width: 80%;
-      margin: 20px auto; }
+      margin: 20px auto;
+      color: #636363;
+      animation-fill-mode: backwards;
+      animation-duration: 2s;
+      animation-name: colorear; }
+
+@keyframes colorear {
+  from {
+    color: transparent; }
+  to {
+    color: #636363; } }
     @media (min-width: 680px) {
       .contacto .contacto__right {
         width: 50%; } }
-  @media (min-width: 620px) {
+  @media (min-width: 680px) {
     .contacto {
       flex-direction: row;
       justify-content: center; } }
@@ -679,18 +728,20 @@ html {
 .bici {
   width: 100vw;
   padding-top: 40px;
-  animation: 4s infinite;
-  animation-name: andando;
   overflow-x: hidden; }
 
 @keyframes andando {
   0% {
-    transform: translateX(-70%); }
+    transform: translateX(-600%); }
+  50% {
+    transform: translateX(200%); }
   100% {
-    transform: translateX(70%); } }
+    transform: translateX(600%); } }
   .bici img {
     height: 100px;
-    width: 100px; }
+    width: 100px;
+    animation: 4s infinite;
+    animation-name: andando; }
     @media (min-width: 680px) {
       .bici img {
         height: 150px;

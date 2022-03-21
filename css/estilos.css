@@ -9,8 +9,7 @@
 
 main {
   padding: 0;
-  margin: 0;
-  width: 90vw; }
+  margin: 0; }
 
 /*FUENTES*/
 /*font-family: 'Contrail One', cursive;*/
@@ -281,27 +280,27 @@ html {
       width: 80vw;
       text-align: center;
       align-self: center; }
-      @media (min-width: 620px) {
+      @media (min-width: 680px) {
         .portada_imagen .portada #portada__textGovinda {
           font-size: 180px; } }
     .portada_imagen .portada #portada__textVeggie {
       font-size: 13px;
       /*20*/
       padding-bottom: 20px; }
-      @media (min-width: 620px) {
+      @media (min-width: 680px) {
         .portada_imagen .portada #portada__textVeggie {
           font-size: 20px; } }
     .portada_imagen .portada #portada__textComidaCasera {
       font-size: 80px;
       /*114*/ }
-      @media (min-width: 620px) {
+      @media (min-width: 680px) {
         .portada_imagen .portada #portada__textComidaCasera {
           font-size: 114px; } }
     .portada_imagen .portada #portada__textCongelado {
       font-size: 32px;
       /*48*/
       padding-bottom: 60px; }
-      @media (min-width: 620px) {
+      @media (min-width: 680px) {
         .portada_imagen .portada #portada__textCongelado {
           font-size: 48px; } }
     .portada_imagen .portada .contenedorButton {
@@ -318,10 +317,10 @@ html {
       .portada_imagen .portada #portada__button:hover {
         transition: 0.5s;
         color: #ffbc6f; }
-      @media (min-width: 620px) {
+      @media (min-width: 680px) {
         .portada_imagen .portada #portada__button {
           font-size: 36px; } }
-  @media (min-width: 620px) {
+  @media (min-width: 680px) {
     .portada_imagen {
       background-size: 100vw; } }
 
@@ -344,17 +343,17 @@ html {
       height: 115px;
       width: 115px;
       align-self: center; }
-      @media (min-width: 620px) {
+      @media (min-width: 680px) {
         .seccionIconos .seccionIconos__card .seccionIconos__card__img {
           height: 230px;
           width: 230px; } }
     .seccionIconos .seccionIconos__card .seccionIconos__card__p {
       font-size: 15px;
       font-family: 'Oswald', sans-serif; }
-      @media (min-width: 620px) {
+      @media (min-width: 680px) {
         .seccionIconos .seccionIconos__card .seccionIconos__card__p {
           font-size: 40px; } }
-    @media (min-width: 620px) {
+    @media (min-width: 680px) {
       .seccionIconos .seccionIconos__card {
         width: 320px;
         height: 280px; } }
